@@ -112,6 +112,63 @@ export interface SearchResult {
   domains: Hosting[];
 }
 
+export interface CrmLead {
+  id: number;
+  name: string;
+  company: string | null;
+  email: string | null;
+  phone: string;
+  source: string;
+  source_label: string;
+  requirement: string;
+  notes: string | null;
+  entered_at: string;
+  status: CrmStatus;
+  status_label: string;
+  estimated_value: number | null;
+  deadline: string | null;
+  deal_date: string | null;
+  lost_reason: string | null;
+  opportunities?: CrmOpportunity[];
+  activities?: CrmActivity[];
+}
+
+export interface CrmOpportunity {
+  id: number;
+  title: string;
+  lead_id: number | null;
+  customer_id: number | null;
+  value: number;
+  stage: CrmStatus;
+  probability: number;
+  offer_date: string | null;
+  deal_date: string | null;
+  notes: string | null;
+  lead?: Pick<CrmLead, 'id' | 'name' | 'phone' | 'status'>;
+  customer?: Pick<Customer, 'id' | 'name'>;
+}
+
+export interface CrmActivity {
+  id: number;
+  lead_id: number | null;
+  type: string;
+  description: string;
+  created_at: string;
+  lead?: Pick<CrmLead, 'id' | 'name' | 'status'>;
+}
+
+export type CrmStatus = 'new' | 'contacted' | 'interested' | 'discussion' | 'offer_sent' | 'negotiation' | 'deal' | 'lost';
+
+export interface CrmDashboard {
+  status_counts: Record<CrmStatus, number>;
+  pipeline_value: number;
+  revenue: number;
+  source_stats: Record<string, { leads: number; interested: number; offers: number; deals: number; revenue: number }>;
+  recent_activities: CrmActivity[];
+  recent_leads: CrmLead[];
+  customers_count: number;
+}
+
 export const CUSTOMER_STATUS = {
   active: 'Active',
   non_active: 'Non Active',
@@ -145,4 +202,24 @@ export const TASK_TYPE = {
   revisi: 'Revisi',
   bug_fix: 'Bug Fix',
   maintenance: 'Maintenance',
+} as const;
+
+export const CRM_STATUS = {
+  new: 'New',
+  contacted: 'Contacted',
+  interested: 'Interested',
+  discussion: 'Discussion',
+  offer_sent: 'Offer Sent',
+  negotiation: 'Negotiation',
+  deal: 'Deal',
+  lost: 'Lost',
+} as const;
+
+export const CRM_SOURCE = {
+  meta_ads: 'Meta Ads',
+  whatsapp: 'WhatsApp',
+  instagram: 'Instagram',
+  referral: 'Referral',
+  website: 'Website',
+  other: 'Other',
 } as const;

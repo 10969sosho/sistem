@@ -18,6 +18,7 @@ class StoreCustomerRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255'],
+            'company' => ['nullable', 'string', 'max:255'],
             'pic_name' => ['nullable', 'string', 'max:255'],
             'whatsapp' => ['nullable', 'string', 'max:20'],
             'email' => ['nullable', 'email', 'max:255'],

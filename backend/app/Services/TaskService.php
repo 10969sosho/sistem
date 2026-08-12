@@ -24,7 +24,7 @@ class TaskService
     public function show(int $id): Task
     {
         return $this->repository->findOrFail($id)
-            ->load(['customer:id,name,pic_name,whatsapp,email,status', 'project:id,name,status,customer_id', 'project.customer:id,name']);
+            ->load(['customer:id,name,pic_name,whatsapp,email,status', 'project:id,name,status,customer_id', 'project.customer:id,name', 'lead:id,name,status']);
     }
 
     public function create(array $data): Task

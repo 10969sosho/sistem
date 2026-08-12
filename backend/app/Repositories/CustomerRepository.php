@@ -41,6 +41,7 @@ class CustomerRepository extends BaseRepository
 
         $query->where(function (Builder $q) use ($search) {
             $q->where('name', 'like', "%{$search}%")
+                ->orWhere('company', 'like', "%{$search}%")
                 ->orWhere('pic_name', 'like', "%{$search}%")
                 ->orWhere('whatsapp', 'like', "%{$search}%")
                 ->orWhere('email', 'like', "%{$search}%");

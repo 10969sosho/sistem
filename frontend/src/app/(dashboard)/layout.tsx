@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useAuthStore } from '@/lib/auth-store';
 import { useEffect } from 'react';
-import { BarChart3, CheckSquare, ChevronRight, CircleDollarSign, LayoutDashboard, LogOut, Server, Users, BriefcaseBusiness } from 'lucide-react';
+import { BarChart3, CheckSquare, ChevronRight, CircleDollarSign, Handshake, LayoutDashboard, LogOut, Server, Users, BriefcaseBusiness } from 'lucide-react';
 
 const navigation = [
   { name: 'Dashboard', href: '/', icon: LayoutDashboard },
@@ -13,6 +13,7 @@ const navigation = [
   { name: 'Tasks', href: '/tasks', icon: CheckSquare },
   { name: 'Hosting', href: '/hosting', icon: Server },
   { name: 'Finance', href: '/finance', icon: CircleDollarSign },
+  { name: 'CRM', href: '/crm', icon: Handshake },
 ];
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {

@@ -13,6 +13,7 @@ class TaskResource extends JsonResource
             'id' => $this->id,
             'customer_id' => $this->customer_id,
             'project_id' => $this->project_id,
+            'lead_id' => $this->lead_id,
             'title' => $this->title,
             'type' => $this->type,
             'priority' => $this->priority,

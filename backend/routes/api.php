@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CustomerController;
+use App\Http\Controllers\Api\CrmController;
 use App\Http\Controllers\Api\DashboardController;
 use App\Http\Controllers\Api\FinanceController;
 use App\Http\Controllers\Api\HostingController;
@@ -23,6 +24,21 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::get('/meta/options', [MetaController::class, 'options']);
     Route::get('/meta/enums', [MetaController::class, 'enums']);
+
+    Route::get('/crm/dashboard', [CrmController::class, 'dashboard']);
+    Route::get('/crm/leads', [CrmController::class, 'leads']);
+    Route::post('/crm/leads', [CrmController::class, 'storeLead']);
+    Route::get('/crm/leads/{id}', [CrmController::class, 'lead']);
+    Route::put('/crm/leads/{id}', [CrmController::class, 'updateLead']);
+    Route::delete('/crm/leads/{id}', [CrmController::class, 'destroyLead']);
+    Route::patch('/crm/leads/{id}/status', [CrmController::class, 'status']);
+    Route::post('/crm/leads/{id}/activities', [CrmController::class, 'activity']);
+    Route::get('/crm/activities', [CrmController::class, 'activities']);
+    Route::get('/crm/opportunities', [CrmController::class, 'opportunities']);
+    Route::post('/crm/opportunities', [CrmController::class, 'storeOpportunity']);
+    Route::get('/crm/opportunities/{id}', [CrmController::class, 'opportunity']);
+    Route::put('/crm/opportunities/{id}', [CrmController::class, 'updateOpportunity']);
+    Route::delete('/crm/opportunities/{id}', [CrmController::class, 'destroyOpportunity']);
 
     Route::apiResource('customers', CustomerController::class);
     Route::apiResource('projects', ProjectController::class);
