@@ -7,6 +7,10 @@ import { api, type ApiResponse } from '@/lib/api';
 import type { Task } from '@/lib/types';
 import { TASK_PRIORITY, TASK_STATUS, TASK_TYPE } from '@/lib/types';
 
+export function generateStaticParams() {
+  return [];
+}
+
 export default function TaskDetailPage() {
   const params = useParams<{ id: string }>();
   const [task, setTask] = useState<Task | null>(null);
