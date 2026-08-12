@@ -1,7 +1,7 @@
 import TaskDetail from './task-detail';
 
 export function generateStaticParams() {
-  return [];
+  return [{ id: 'placeholder' }];
 }
 
 export default function Page() {
