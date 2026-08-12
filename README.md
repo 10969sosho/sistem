@@ -68,6 +68,15 @@ Aplikasi web untuk membantu perusahaan software house mengelola customer, projec
 ### 7. Global Search
 - Search across Customer, Project, Task, Domain
 
+### 8. CRM (v1)
+- Lead pipeline: New → Contacted → Interested → Discussion → Offer Sent → Negotiation → Deal / Lost
+- Auto follow-up task saat lead baru masuk
+- Activity timeline per lead (WhatsApp, Call, Meeting, Email, Note)
+- Opportunity / penawaran dengan pipeline value & revenue tracking
+- Konversi Deal otomatis menjadi Customer
+- Source performance dashboard
+- Semua data CRM di-scope per user
+
 ---
 
 ## 🛠 Tech Stack
@@ -219,6 +228,15 @@ Setelah menjalankan `php artisan db:seed`:
 ### Finances
 - id, project_id (unique), total, dp, termin1, termin2, termin3, pelunasan, timestamps, soft_deletes
 
+### Leads (CRM)
+- id, name, company, email, phone, source, requirement, notes, entered_at, status, estimated_value, deadline, deal_date, lost_reason, replied_at, user_id, customer_id (nullable), timestamps
+
+### Activities (CRM)
+- id, user_id, lead_id (nullable), type, description, timestamps
+
+### Opportunities (CRM)
+- id, title, lead_id, customer_id (nullable), value, stage, probability, proposal_sent_at, offer_date, deal_date, expected_close_date, notes, user_id, soft_deletes, timestamps
+
 ---
 
 ## 🔌 API Endpoints
@@ -288,6 +306,24 @@ GET    /api/search?q={query}           # Global search (auth required)
 ```
 GET    /api/meta/options               # Dropdown options (auth required)
 GET    /api/meta/enums                 # Enum values (auth required)
+```
+
+### CRM
+```
+GET    /api/crm/dashboard              # CRM summary (auth required)
+GET    /api/crm/leads                  # List leads (auth required)
+POST   /api/crm/leads                  # Create lead (auth required)
+GET    /api/crm/leads/{id}             # Get lead detail (auth required)
+PUT    /api/crm/leads/{id}             # Update lead (auth required)
+DELETE /api/crm/leads/{id}             # Delete lead (auth required)
+PATCH  /api/crm/leads/{id}/status      # Change lead status (auth required)
+POST   /api/crm/leads/{id}/activities  # Add activity to lead (auth required)
+GET    /api/crm/activities             # List all activities (auth required)
+GET    /api/crm/opportunities          # List opportunities (auth required)
+POST   /api/crm/opportunities          # Create opportunity (auth required)
+GET    /api/crm/opportunities/{id}     # Get opportunity (auth required)
+PUT    /api/crm/opportunities/{id}     # Update opportunity (auth required)
+DELETE /api/crm/opportunities/{id}     # Delete opportunity (auth required)
 ```
 
 ---
