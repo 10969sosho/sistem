@@ -87,6 +87,7 @@ curl -sI https://qwe.solusisurabaya.com/                        # 200, text/html
 curl -s -X POST https://qwe.solusisurabaya.com/api/login \
   -H 'Content-Type: application/json' \
   --data '{"email":"admin@example.com","password":"password"}'   # 200 + token
+curl -s -o /dev/null -w '%{http_code}\n' https://qwe.solusisurabaya.com/api/meta/enums   # 401 (unauthenticated)
 curl -s https://qwe.solusisurabaya.com/customers                 # 200 (customers.html)
 curl -s -o /dev/null -w '%{http_code}\n' https://qwe.solusisurabaya.com/tasks/5   # 200 (SPA fallback)
 ```
