@@ -43,6 +43,7 @@ export interface Task {
   type: 'development' | 'revisi' | 'bug_fix' | 'maintenance';
   priority: 'low' | 'medium' | 'high' | 'urgent';
   status: 'todo' | 'progress' | 'waiting' | 'done';
+  cabang: 'tian' | 'cecil' | null;
   pic: string | null;
   deadline: string | null;
   estimate: string | null;
@@ -202,6 +203,11 @@ export const TASK_TYPE = {
   revisi: 'Revisi',
   bug_fix: 'Bug Fix',
   maintenance: 'Maintenance',
+} as const;
+
+export const TASK_CABANG = {
+  tian: 'Tian',
+  cecil: 'Cecil',
 } as const;
 
 export const CRM_STATUS = {

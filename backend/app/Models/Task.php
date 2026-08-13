@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-#[Fillable(['customer_id', 'project_id', 'lead_id', 'title', 'type', 'priority', 'status', 'pic', 'deadline', 'estimate', 'notes'])]
+#[Fillable(['customer_id', 'project_id', 'lead_id', 'title', 'type', 'priority', 'status', 'cabang', 'pic', 'deadline', 'estimate', 'notes'])]
 #[Hidden(['deleted_at'])]
 class Task extends Model
 {

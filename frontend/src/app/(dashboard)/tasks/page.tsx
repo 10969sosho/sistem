@@ -2,10 +2,10 @@
 
 import { FormEvent, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Eye, Pencil, Plus } from 'lucide-react';
+import { Eye, Pencil, Plus, Trash2 } from 'lucide-react';
 import { api, type ApiResponse, type PaginatedResponse } from '@/lib/api';
 import type { Customer, Project, Task } from '@/lib/types';
-import { TASK_PRIORITY, TASK_STATUS, TASK_TYPE } from '@/lib/types';
+import { TASK_CABANG, TASK_PRIORITY, TASK_STATUS, TASK_TYPE } from '@/lib/types';
 import { Drawer, FormField, fieldClass } from '@/components/ui/Drawer';
 import { DrawerButtons } from '@/components/ui/DrawerButtons';
 import { useDrawer } from '@/lib/use-drawer';
@@ -50,12 +50,13 @@ export default function TasksPage() {
   const [search, setSearch] = useState('');
   const [priorityFilter, setPriorityFilter] = useState('');
   const [typeFilter, setTypeFilter] = useState('');
+  const [cabangFilter, setCabangFilter] = useState('');
   const [error, setError] = useState('');
   const [task, setTask] = useState<Task | null>(null);
   const [customers, setCustomers] = useState<Customer[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
   const [saving, setSaving] = useState(false);
-  const [form, setForm] = useState({ customer_id: '', project_id: '', title: '', type: 'development', priority: 'medium', status: 'todo', pic: '', deadline: '', estimate: '', notes: '' });
+  const [form, setForm] = useState({ customer_id: '', project_id: '', title: '', type: 'development', priority: 'medium', status: 'todo', cabang: '', pic: '', deadline: '', estimate: '', notes: '' });
   const drawer = useDrawer();
 
   const fetchTasks = async () => {
@@ -67,6 +68,7 @@ export default function TasksPage() {
       if (search) params.search = search;
       if (priorityFilter) params.priority = priorityFilter;
       if (typeFilter) params.type = typeFilter;
+      if (cabangFilter) params.cabang = cabangFilter;
 
       const response = await api.get<PaginatedResponse<Task>>('/tasks', params);
       setTasks(response.data);
@@ -79,7 +81,7 @@ export default function TasksPage() {
 
   useEffect(() => {
     fetchTasks();
-  }, [search, priorityFilter, typeFilter]);
+  }, [search, priorityFilter, typeFilter, cabangFilter]);
 
   useEffect(() => {
     void Promise.all([
@@ -96,13 +98,13 @@ export default function TasksPage() {
     void api.get<ApiResponse<Task>>(`/tasks/${drawer.id}`).then((response) => {
       const value = response.data;
       setTask(value);
-      setForm({ customer_id: value.customer_id ? String(value.customer_id) : '', project_id: value.project_id ? String(value.project_id) : '', title: value.title, type: value.type, priority: value.priority, status: value.status, pic: value.pic || '', deadline: value.deadline || '', estimate: value.estimate || '', notes: value.notes || '' });
+      setForm({ customer_id: value.customer_id ? String(value.customer_id) : '', project_id: value.project_id ? String(value.project_id) : '', title: value.title, type: value.type, priority: value.priority, status: value.status, cabang: value.cabang || '', pic: value.pic || '', deadline: value.deadline || '', estimate: value.estimate || '', notes: value.notes || '' });
     }).catch((err) => setError(err instanceof Error ? err.message : 'Detail task gagal dimuat.'));
   }, [drawer.id]);
 
   const openCreate = () => {
     setTask(null);
-    setForm({ customer_id: '', project_id: '', title: '', type: 'development', priority: 'medium', status: 'todo', pic: '', deadline: '', estimate: '', notes: '' });
+    setForm({ customer_id: '', project_id: '', title: '', type: 'development', priority: 'medium', status: 'todo', cabang: '', pic: '', deadline: '', estimate: '', notes: '' });
     drawer.open('create');
   };
 
@@ -115,6 +117,15 @@ export default function TasksPage() {
       await fetchTasks(); drawer.close();
     } catch (err) { setError(err instanceof Error ? err.message : 'Task gagal disimpan.'); }
     finally { setSaving(false); }
+  };
+
+  const remove = async (task: Task) => {
+    if (!window.confirm(`Hapus task "${task.title}"?`)) return;
+    setError('');
+    try {
+      await api.delete(`/tasks/${task.id}`);
+      await fetchTasks();
+    } catch (err) { setError(err instanceof Error ? err.message : 'Task gagal dihapus.'); }
   };
 
   const moveTask = async (taskId: number, nextStatus: ColumnKey) => {
@@ -183,6 +194,16 @@ export default function TasksPage() {
             onChange={(event) => setSearch(event.target.value)}
             className="rounded-lg border border-slate-300 px-3 py-2.5 text-sm text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
           />
+          <select
+            value={cabangFilter}
+            onChange={(event) => setCabangFilter(event.target.value)}
+            className="rounded-lg border border-slate-300 px-3 py-2.5 text-sm text-slate-800 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+          >
+            <option value="">Semua Cabang</option>
+            {Object.entries(TASK_CABANG).map(([value, label]) => (
+              <option key={value} value={value}>{label}</option>
+            ))}
+          </select>
           <select
             value={priorityFilter}
             onChange={(event) => setPriorityFilter(event.target.value)}
@@ -253,6 +274,11 @@ export default function TasksPage() {
                       <div className="mt-3 space-y-1.5 text-xs text-slate-500">
                         <p>{task.project?.name || task.customer?.name || 'Task manual'}</p>
                         <p>{TASK_TYPE[task.type as keyof typeof TASK_TYPE]}{task.pic ? ` · ${task.pic}` : ''}</p>
+                        {task.cabang && (
+                          <span className="inline-block rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-semibold uppercase text-slate-600">
+                            {TASK_CABANG[task.cabang]}
+                          </span>
+                        )}
                         {task.deadline && (
                           <p className={task.is_overdue ? 'font-semibold text-red-600' : ''}>
                             Deadline: {task.deadline}{task.is_overdue ? ' · Terlambat' : ''}
@@ -261,7 +287,7 @@ export default function TasksPage() {
                       </div>
 
                       <div className="mt-4 flex items-center justify-between border-t border-slate-100 pt-3">
-                        <div className="flex items-center gap-1"><button type="button" onClick={() => drawer.open('show', task.id)} className="rounded-lg p-1.5 text-slate-500 hover:bg-blue-50 hover:text-blue-600" title="Detail task"><Eye size={15} /></button><button type="button" onClick={() => drawer.open('edit', task.id)} className="rounded-lg p-1.5 text-slate-500 hover:bg-blue-50 hover:text-blue-600" title="Edit task"><Pencil size={15} /></button></div>
+                        <div className="flex items-center gap-1"><button type="button" onClick={() => drawer.open('show', task.id)} className="rounded-lg p-1.5 text-slate-500 hover:bg-blue-50 hover:text-blue-600" title="Detail task"><Eye size={15} /></button><button type="button" onClick={() => drawer.open('edit', task.id)} className="rounded-lg p-1.5 text-slate-500 hover:bg-blue-50 hover:text-blue-600" title="Edit task"><Pencil size={15} /></button><button type="button" onClick={() => void remove(task)} className="rounded-lg p-1.5 text-slate-500 hover:bg-red-50 hover:text-red-600" title="Hapus task"><Trash2 size={15} /></button></div>
                         {savingTaskId === task.id && <span className="text-[11px] text-blue-600">Menyimpan...</span>}
                       </div>
                     </article>
@@ -284,7 +310,7 @@ export default function TasksPage() {
       </div>
 
       <Drawer open={drawer.mode !== null} onClose={drawer.close} eyebrow="Task workflow" title={drawer.mode === 'create' ? 'Tambah Task' : drawer.mode === 'edit' ? 'Edit Task' : 'Detail Task'} footer={drawer.mode === 'create' || drawer.mode === 'edit' ? <DrawerButtons formId="task-drawer-form" saving={saving} onCancel={drawer.close} submitLabel={drawer.mode === 'create' ? 'Tambah Task' : 'Simpan Perubahan'} /> : undefined}>
-        {drawer.mode === 'show' && task ? <div className="space-y-6"><div className="rounded-xl bg-slate-900 p-5 text-white"><p className="text-xs uppercase tracking-wider text-blue-300">Task detail</p><h3 className="mt-2 text-xl font-bold">{task.title}</h3><p className="mt-2 text-sm text-slate-300">{task.project?.name || task.customer?.name || 'Task manual'}</p></div><div className="grid grid-cols-2 gap-4 text-sm"><div><p className="text-xs font-bold uppercase text-slate-400">Status</p><p className="mt-1 font-semibold text-slate-800">{TASK_STATUS[task.status as keyof typeof TASK_STATUS]}</p></div><div><p className="text-xs font-bold uppercase text-slate-400">Prioritas</p><p className="mt-1 text-slate-800">{TASK_PRIORITY[task.priority as keyof typeof TASK_PRIORITY]}</p></div><div><p className="text-xs font-bold uppercase text-slate-400">Jenis</p><p className="mt-1 text-slate-800">{TASK_TYPE[task.type as keyof typeof TASK_TYPE]}</p></div><div><p className="text-xs font-bold uppercase text-slate-400">Deadline</p><p className="mt-1 text-slate-800">{task.deadline || '-'}</p></div></div><div><p className="text-xs font-bold uppercase text-slate-400">Catatan</p><p className="mt-2 min-h-24 whitespace-pre-wrap rounded-lg bg-slate-50 p-4 text-sm leading-6 text-slate-600">{task.notes || 'Belum ada catatan.'}</p></div><button onClick={() => drawer.open('edit', task.id)} className="w-full rounded-lg bg-blue-600 px-4 py-3 text-sm font-semibold text-white hover:bg-blue-700">Edit task</button></div> : <form id="task-drawer-form" onSubmit={submit} className="space-y-5"><FormField label="Judul Task"><input required value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} className={fieldClass} /></FormField><div className="grid grid-cols-2 gap-4"><FormField label="Customer"><select value={form.customer_id} onChange={(e) => setForm({ ...form, customer_id: e.target.value })} className={fieldClass}><option value="">Tanpa customer</option>{customers.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select></FormField><FormField label="Project"><select value={form.project_id} onChange={(e) => setForm({ ...form, project_id: e.target.value })} className={fieldClass}><option value="">Task manual</option>{projects.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select></FormField></div><div className="grid grid-cols-2 gap-4"><FormField label="Jenis"><select value={form.type} onChange={(e) => setForm({ ...form, type: e.target.value })} className={fieldClass}>{Object.entries(TASK_TYPE).map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></FormField><FormField label="Prioritas"><select value={form.priority} onChange={(e) => setForm({ ...form, priority: e.target.value })} className={fieldClass}>{Object.entries(TASK_PRIORITY).map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></FormField></div><div className="grid grid-cols-2 gap-4"><FormField label="Status"><select value={form.status} onChange={(e) => setForm({ ...form, status: e.target.value })} className={fieldClass}>{Object.entries(TASK_STATUS).map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></FormField><FormField label="PIC"><input value={form.pic} onChange={(e) => setForm({ ...form, pic: e.target.value })} className={fieldClass} /></FormField></div><div className="grid grid-cols-2 gap-4"><FormField label="Deadline"><input type="date" value={form.deadline} onChange={(e) => setForm({ ...form, deadline: e.target.value })} className={fieldClass} /></FormField><FormField label="Estimasi"><input value={form.estimate} onChange={(e) => setForm({ ...form, estimate: e.target.value })} className={fieldClass} placeholder="Contoh: 2 hari" /></FormField></div><FormField label="Catatan"><textarea rows={5} value={form.notes} onChange={(e) => setForm({ ...form, notes: e.target.value })} className={fieldClass} /></FormField></form>}
+        {drawer.mode === 'show' && task ? <div className="space-y-6"><div className="rounded-xl bg-slate-900 p-5 text-white"><p className="text-xs uppercase tracking-wider text-blue-300">Task detail</p><h3 className="mt-2 text-xl font-bold">{task.title}</h3><p className="mt-2 text-sm text-slate-300">{task.project?.name || task.customer?.name || 'Task manual'}</p></div><div className="grid grid-cols-2 gap-4 text-sm"><div><p className="text-xs font-bold uppercase text-slate-400">Status</p><p className="mt-1 font-semibold text-slate-800">{TASK_STATUS[task.status as keyof typeof TASK_STATUS]}</p></div><div><p className="text-xs font-bold uppercase text-slate-400">Prioritas</p><p className="mt-1 text-slate-800">{TASK_PRIORITY[task.priority as keyof typeof TASK_PRIORITY]}</p></div><div><p className="text-xs font-bold uppercase text-slate-400">Jenis</p><p className="mt-1 text-slate-800">{TASK_TYPE[task.type as keyof typeof TASK_TYPE]}</p></div><div><p className="text-xs font-bold uppercase text-slate-400">Cabang</p><p className="mt-1 text-slate-800">{task.cabang ? TASK_CABANG[task.cabang] : '-'}</p></div><div><p className="text-xs font-bold uppercase text-slate-400">Deadline</p><p className="mt-1 text-slate-800">{task.deadline || '-'}</p></div></div><div><p className="text-xs font-bold uppercase text-slate-400">Catatan</p><p className="mt-2 min-h-24 whitespace-pre-wrap rounded-lg bg-slate-50 p-4 text-sm leading-6 text-slate-600">{task.notes || 'Belum ada catatan.'}</p></div><button onClick={() => drawer.open('edit', task.id)} className="w-full rounded-lg bg-blue-600 px-4 py-3 text-sm font-semibold text-white hover:bg-blue-700">Edit task</button></div> : <form id="task-drawer-form" onSubmit={submit} className="space-y-5"><FormField label="Judul Task"><input required value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} className={fieldClass} /></FormField><div className="grid grid-cols-2 gap-4"><FormField label="Customer"><select value={form.customer_id} onChange={(e) => setForm({ ...form, customer_id: e.target.value })} className={fieldClass}><option value="">Tanpa customer</option>{customers.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select></FormField><FormField label="Project"><select value={form.project_id} onChange={(e) => setForm({ ...form, project_id: e.target.value })} className={fieldClass}><option value="">Task manual</option>{projects.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select></FormField></div><div className="grid grid-cols-2 gap-4"><FormField label="Jenis"><select value={form.type} onChange={(e) => setForm({ ...form, type: e.target.value })} className={fieldClass}>{Object.entries(TASK_TYPE).map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></FormField><FormField label="Prioritas"><select value={form.priority} onChange={(e) => setForm({ ...form, priority: e.target.value })} className={fieldClass}>{Object.entries(TASK_PRIORITY).map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></FormField><FormField label="Cabang"><select value={form.cabang} onChange={(e) => setForm({ ...form, cabang: e.target.value })} className={fieldClass}><option value="">Tanpa cabang</option>{Object.entries(TASK_CABANG).map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></FormField></div><div className="grid grid-cols-2 gap-4"><FormField label="Status"><select value={form.status} onChange={(e) => setForm({ ...form, status: e.target.value })} className={fieldClass}>{Object.entries(TASK_STATUS).map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></FormField><FormField label="PIC"><input value={form.pic} onChange={(e) => setForm({ ...form, pic: e.target.value })} className={fieldClass} /></FormField></div><div className="grid grid-cols-2 gap-4"><FormField label="Deadline"><input type="date" value={form.deadline} onChange={(e) => setForm({ ...form, deadline: e.target.value })} className={fieldClass} /></FormField><FormField label="Estimasi"><input value={form.estimate} onChange={(e) => setForm({ ...form, estimate: e.target.value })} className={fieldClass} placeholder="Contoh: 2 hari" /></FormField></div><FormField label="Catatan"><textarea rows={5} value={form.notes} onChange={(e) => setForm({ ...form, notes: e.target.value })} className={fieldClass} /></FormField></form>}
       </Drawer>
     </div>
   );

@@ -8,5 +8,5 @@ use Illuminate\Validation\Rule;
 class StoreActivityRequest extends FormRequest
 {
     public function authorize(): bool { return true; }
-    public function rules(): array { return ['type' => ['required', Rule::in(['whatsapp', 'call', 'meeting', 'email', 'note'])], 'description' => ['required', 'string', 'max:2000']]; }
+    public function rules(): array { return ['type' => ['required', Rule::in(['whatsapp', 'call', 'meeting', 'note'])], 'description' => ['required', 'string', 'max:2000']]; }
 }

@@ -72,10 +72,12 @@ class SearchTest extends TestCase
         Project::factory()->create([
             'customer_id' => $customer1->id,
             'name' => 'E-Commerce Website',
+            'type' => 'Website',
         ]);
         Project::factory()->create([
             'customer_id' => $customer2->id,
             'name' => 'Mobile App',
+            'type' => 'Mobile App',
         ]);
 
         $response = $this->actingAs($this->user, 'sanctum')

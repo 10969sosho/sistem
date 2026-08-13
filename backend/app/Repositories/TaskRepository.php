@@ -38,7 +38,7 @@ class TaskRepository extends BaseRepository
 
         $this->applySearch($query, $filters['search'] ?? null);
 
-        foreach (['status', 'priority', 'type', 'pic'] as $field) {
+        foreach (['status', 'priority', 'type', 'cabang', 'pic'] as $field) {
             if (! empty($filters[$field])) {
                 $query->where($field, $filters[$field]);
             }
@@ -98,6 +98,6 @@ class TaskRepository extends BaseRepository
 
     protected function sortableColumns(): array
     {
-        return ['title', 'status', 'priority', 'type', 'pic', 'deadline', 'created_at'];
+        return ['title', 'status', 'priority', 'type', 'cabang', 'pic', 'deadline', 'created_at'];
     }
 }
