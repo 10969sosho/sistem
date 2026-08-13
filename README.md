@@ -47,10 +47,12 @@ Aplikasi web untuk membantu perusahaan software house mengelola customer, projec
   - Belum Dikerjakan (todo, waiting)
   - Sudah Dikerjakan (progress) - menunggu check
   - Sudah Check (done)
+- **Cabang task (Tian / Cecil):** pilih cabang saat buat/edit task, filter & badge cabang di board
 - Drag & drop antar kolom
 - Status otomatis tersimpan
-- Filter: search, priority, type
+- Filter: search, priority, type, cabang
 - Detail task dengan workflow status
+- Delete task langsung dari kartu kanban
 
 ### 5. Hosting & Domain
 - Provider & Package tracking
@@ -71,11 +73,12 @@ Aplikasi web untuk membantu perusahaan software house mengelola customer, projec
 ### 8. CRM (v1)
 - Lead pipeline: New → Contacted → Interested → Discussion → Offer Sent → Negotiation → Deal / Lost
 - Auto follow-up task saat lead baru masuk
-- Activity timeline per lead (WhatsApp, Call, Meeting, Email, Note)
+- Activity timeline per lead (WhatsApp, Call, Meeting, Note)
 - Opportunity / penawaran dengan pipeline value & revenue tracking
 - Konversi Deal otomatis menjadi Customer
 - Source performance dashboard
 - Semua data CRM di-scope per user
+- Delete action pada Leads & Opportunities
 
 ---
 
@@ -85,7 +88,7 @@ Aplikasi web untuk membantu perusahaan software house mengelola customer, projec
 - **Laravel 13** - PHP Framework
 - **MySQL 9** - Database
 - **Laravel Sanctum** - API Authentication
-- **PHPUnit 12** - Testing (63 tests)
+- **PHPUnit 12** - Testing (65 tests)
 
 ### Frontend
 - **Next.js 16** - React Framework
@@ -220,7 +223,7 @@ Setelah menjalankan `php artisan db:seed`:
 - id, customer_id, name, type, description, status (pending/progress/testing/revisi/maintenance/selesai), deadline, pic, start_date, finish_date, internal_notes, timestamps, soft_deletes
 
 ### Tasks
-- id, customer_id, project_id, title, type (development/revisi/bug_fix/maintenance), priority (low/medium/high/urgent), status (todo/progress/waiting/done), pic, deadline, estimate, notes, timestamps, soft_deletes
+- id, customer_id, project_id, lead_id, title, type (development/revisi/bug_fix/maintenance), priority (low/medium/high/urgent), status (todo/progress/waiting/done), cabang (tian/cecil), pic, deadline, estimate, notes, timestamps, soft_deletes
 
 ### Hostings
 - id, project_id (unique), provider, package, expired_date, domain, registrar, domain_expired_date, ssl_status, ssl_expired_date, server_ip, panel, username, notes, timestamps, soft_deletes
@@ -345,11 +348,11 @@ php artisan test --filter=AuthTest
 php artisan test --coverage
 ```
 
-**Total: 63 tests** covering:
+**Total: 65 tests** covering:
 - Authentication (5 tests)
 - Customer CRUD (9 tests)
 - Project CRUD (9 tests)
-- Task CRUD (11 tests)
+- Task CRUD (13 tests)
 - Hosting CRUD (6 tests)
 - Finance CRUD (7 tests)
 - Dashboard (6 tests)

@@ -132,6 +132,7 @@ Menu yang paling sering digunakan. Task ditampilkan dalam bentuk Kanban Board 3 
 | Judul Task | Text | Ya | Judul/nama task |
 | Customer | Select | Tidak | Customer terkait (otomatis dari project) |
 | Project | Select | Tidak | Project terkait |
+| Cabang | Select | Tidak | Cabang task: Tian / Cecil |
 | PIC | Text | Tidak | Person in charge |
 | Priority | Select | Ya | Tingkat prioritas |
 | Status | Select | Ya | Status task |
@@ -188,10 +189,25 @@ Menu yang paling sering digunakan. Task ditampilkan dalam bentuk Kanban Board 3 
 | Waiting | Menunggu sesuatu (approval, data, dll) |
 | Done | Selesai |
 
+### Cabang Task
+
+Task dapat dikelompokkan berdasarkan cabang (branch):
+
+| Cabang | Keterangan |
+|--------|-----------|
+| Tian | Cabang Tian |
+| Cecil | Cabang Cecil |
+
+- Saat membuat/mengedit task, pilih cabang (Tian / Cecil)
+- Board task menyediakan filter "Semua Cabang / Tian / Cecil"
+- Kartu task menampilkan badge cabang jika terisi
+
 ### Fitur Tambahan
 - **Search**: Cari task berdasarkan judul, project, customer, PIC
 - **Filter Priority**: Filter berdasarkan prioritas
 - **Filter Type**: Filter berdasarkan jenis task
+- **Filter Cabang**: Filter berdasarkan cabang task
+- **Delete Task**: Hapus task langsung dari kartu kanban (dengan konfirmasi)
 - **Indikator Overdue**: Task yang deadline-nya sudah lewat ditandai merah
 - **Quick Status Change**: Ubah status langsung dari detail task
 - **Detail Task**: Halaman detail dengan informasi lengkap

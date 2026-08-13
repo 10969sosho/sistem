@@ -23,6 +23,7 @@ class UpdateTaskRequest extends FormRequest
             'type' => ['required', 'in:development,revisi,bug_fix,maintenance'],
             'priority' => ['required', 'in:low,medium,high,urgent'],
             'status' => ['required', 'in:todo,progress,waiting,done'],
+            'cabang' => ['nullable', 'in:tian,cecil'],
             'pic' => ['nullable', 'string', 'max:100'],
             'deadline' => ['nullable', 'date'],
             'estimate' => ['nullable', 'string', 'max:50'],
@@ -40,6 +41,7 @@ class UpdateTaskRequest extends FormRequest
             'type.in' => 'Tipe task tidak valid.',
             'priority.in' => 'Prioritas task tidak valid.',
             'status.in' => 'Status task tidak valid.',
+            'cabang.in' => 'Cabang task harus tian atau cecil.',
         ];
     }
 }

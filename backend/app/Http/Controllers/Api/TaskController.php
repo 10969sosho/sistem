@@ -25,6 +25,7 @@ class TaskController extends Controller
             'status',
             'priority',
             'type',
+            'cabang',
             'customer_id',
             'project_id',
             'pic',

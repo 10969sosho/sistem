@@ -56,7 +56,7 @@ export default function LeadDetail() {
           <div className="rounded-xl border border-slate-200 bg-white p-5">
             <div className="flex items-start justify-between">
               <div><h1 className="text-xl font-bold text-slate-900">{lead.name}</h1>
-                <div className="text-sm text-slate-500 mt-1"><span className="inline-flex items-center gap-1"><Phone className="h-3 w-3" />{lead.phone}</span>{lead.email && <span className="ml-3">{lead.email}</span>}{lead.company && <span className="ml-3">{lead.company}</span>}</div>
+                <div className="text-sm text-slate-500 mt-1"><span className="inline-flex items-center gap-1"><Phone className="h-3 w-3" />{lead.phone}</span>{lead.company && <span className="ml-3">{lead.company}</span>}</div>
               </div>
               <span className={`rounded-full px-3 py-1 text-xs font-semibold uppercase ${lead.status==='deal'?'bg-emerald-100 text-emerald-700':lead.status==='lost'?'bg-red-100 text-red-700':'bg-blue-100 text-blue-700'}`}>{lead.status_label}</span>
             </div>
@@ -86,7 +86,7 @@ export default function LeadDetail() {
         <div className="space-y-6">
           <div className="rounded-xl border border-slate-200 bg-white p-5"><h3 className="font-semibold text-slate-800 mb-4">Tambah Aktivitas</h3>
             <form onSubmit={(e) => { void addActivity(e); }} className="space-y-3">
-              <select className={fieldClass} value={actForm.type} onChange={(e) => setActForm({ ...actForm, type: e.target.value })}>{['whatsapp','call','meeting','email','note'].map((t) => (<option key={t} value={t}>{t.charAt(0).toUpperCase()+t.slice(1)}</option>))}</select>
+              <select className={fieldClass} value={actForm.type} onChange={(e) => setActForm({ ...actForm, type: e.target.value })}>{['whatsapp','call','meeting','note'].map((t) => (<option key={t} value={t}>{t.charAt(0).toUpperCase()+t.slice(1)}</option>))}</select>
               <textarea className={fieldClass} rows={3} placeholder="Deskripsi aktivitas..." value={actForm.description} onChange={(e) => setActForm({ ...actForm, description: e.target.value })} required />
               <button type="submit" disabled={savingAct} className="w-full rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700 disabled:opacity-50">{savingAct?'Menyimpan...':'Catat Aktivitas'}</button>
             </form>

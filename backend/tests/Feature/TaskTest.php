@@ -117,6 +117,24 @@ class TaskTest extends TestCase
             ->assertJsonCount(2, 'data');
     }
 
+    public function test_can_filter_tasks_by_cabang(): void
+    {
+        Task::factory(2)->create([
+            'customer_id' => $this->customer->id,
+            'cabang' => 'tian',
+        ]);
+        Task::factory(3)->create([
+            'customer_id' => $this->customer->id,
+            'cabang' => 'cecil',
+        ]);
+
+        $response = $this->actingAs($this->user, 'sanctum')
+            ->getJson('/api/tasks?cabang=tian');
+
+        $response->assertStatus(200)
+            ->assertJsonCount(2, 'data');
+    }
+
     public function test_can_get_single_task(): void
     {
         $task = Task::factory()->create([
@@ -263,5 +281,17 @@ class TaskTest extends TestCase
 
         $response->assertStatus(422)
             ->assertJsonValidationErrors(['priority']);
+    }
+
+    public function test_task_validation_requires_valid_cabang(): void
+    {
+        $response = $this->actingAs($this->user, 'sanctum')
+            ->postJson('/api/tasks', [
+                'title' => 'Test',
+                'cabang' => 'invalid',
+            ]);
+
+        $response->assertStatus(422)
+            ->assertJsonValidationErrors(['cabang']);
     }
 }

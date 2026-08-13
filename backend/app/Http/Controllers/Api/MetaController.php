@@ -53,6 +53,7 @@ class MetaController extends Controller
                 'task_status' => ['todo', 'progress', 'waiting', 'done'],
                 'task_priority' => ['low', 'medium', 'high', 'urgent'],
                 'task_type' => ['development', 'revisi', 'bug_fix', 'maintenance'],
+                'task_cabang' => ['tian', 'cecil'],
                 'ssl_status' => ['active', 'non_active'],
                 'payment_status' => [
                     'belum_dp',

@@ -21,6 +21,7 @@ class TaskFactory extends Factory
             'type' => fake()->randomElement(['development', 'revisi', 'bug_fix', 'maintenance']),
             'priority' => fake()->randomElement(['low', 'medium', 'high', 'urgent']),
             'status' => 'todo',
+            'cabang' => fake()->optional(0.5)->randomElement(['tian', 'cecil']),
             'pic' => fake()->name(),
             'deadline' => fake()->dateTimeBetween('-1 week', '+1 week')->format('Y-m-d'),
             'estimate' => fake()->optional()->randomElement(['2 jam', '4 jam', '1 hari', '2 hari', '1 minggu']),

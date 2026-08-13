@@ -2,7 +2,7 @@
 
 import { FormEvent, useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Plus, Search } from 'lucide-react';
+import { Plus, Search, Trash2 } from 'lucide-react';
 import { api, type PaginatedResponse } from '@/lib/api';
 import type { CrmOpportunity } from '@/lib/types';
 import { CRM_STATUS } from '@/lib/types';
@@ -35,6 +35,13 @@ export default function OpportunitiesPage() {
 
   useEffect(() => { void load(); }, [load]);
 
+  const remove = async (item: CrmOpportunity) => {
+    if (!window.confirm(`Hapus penawaran "${item.title}"?`)) return;
+    setError('');
+    try { await api.delete(`/crm/opportunities/${item.id}`); await load(); }
+    catch (err) { setError(err instanceof Error ? err.message : 'Penawaran gagal dihapus.'); }
+  };
+
   const submit = async (e: FormEvent) => {
     e.preventDefault(); setSaving(true); setError('');
     try { await api.post('/crm/opportunities', { ...form, value: Number(form.value) }); drawer.close(); await load(); }
@@ -59,7 +66,7 @@ export default function OpportunitiesPage() {
       <select value={filterStage} onChange={(e) => setFilterStage(e.target.value)} className="rounded-lg border bg-white px-3 py-2 text-sm"><option value="">Semua Stage</option>{Object.entries(CRM_STATUS).map(([k, v]) => <option key={k} value={k}>{v}</option>)}</select>
       <button onClick={() => { setForm(blankForm); drawer.open('create'); }} className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"><Plus className="h-4 w-4" /> Penawaran Baru</button>
     </div>
-    {loading ? <div className="py-12 text-center text-sm text-slate-500">Memuat pipeline...</div> : <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white"><table className="min-w-full text-sm"><thead><tr className="text-left text-xs uppercase text-slate-400 border-b"><th className="px-4 py-3">Judul</th><th className="px-4 py-3">Lead</th><th className="px-4 py-3">Value</th><th className="px-4 py-3">Stage</th><th className="px-4 py-3">Prob</th><th className="px-4 py-3">Tanggal</th></tr></thead><tbody>{opportunities.map((item) => (<tr key={item.id} className="border-b border-slate-50 hover:bg-slate-50/50"><td className="px-4 py-3 font-medium text-slate-800">{item.title}</td><td className="px-4 py-3 text-slate-600">{item.lead ? <Link href={`/crm/leads/${item.lead.id}`} className="text-blue-600 hover:underline">{item.lead.name}</Link> : '-'}</td><td className="px-4 py-3 text-slate-700">Rp {Math.round(item.value).toLocaleString('id-ID')}</td><td className="px-4 py-3"><span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${item.stage==='deal'?'bg-emerald-100 text-emerald-700':item.stage==='lost'?'bg-red-100 text-red-700':'bg-amber-100 text-amber-700'}`}>{CRM_STATUS[item.stage as keyof typeof CRM_STATUS]??item.stage}</span></td><td className="px-4 py-3 text-slate-600">{item.probability}%</td><td className="px-4 py-3 text-slate-600">{item.offer_date??'-'}</td></tr>))}{opportunities.length===0&&<tr><td colSpan={6} className="px-4 py-12 text-center text-slate-400">Belum ada penawaran.</td></tr>}</tbody></table></div>}
+    {loading ? <div className="py-12 text-center text-sm text-slate-500">Memuat pipeline...</div> : <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white"><table className="min-w-full text-sm"><thead><tr className="text-left text-xs uppercase text-slate-400 border-b"><th className="px-4 py-3">Judul</th><th className="px-4 py-3">Lead</th><th className="px-4 py-3">Value</th><th className="px-4 py-3">Stage</th><th className="px-4 py-3">Prob</th><th className="px-4 py-3">Tanggal</th><th className="px-4 py-3"></th></tr></thead><tbody>{opportunities.map((item) => (<tr key={item.id} className="border-b border-slate-50 hover:bg-slate-50/50"><td className="px-4 py-3 font-medium text-slate-800">{item.title}</td><td className="px-4 py-3 text-slate-600">{item.lead ? <Link href={`/crm/leads/${item.lead.id}`} className="text-blue-600 hover:underline">{item.lead.name}</Link> : '-'}</td><td className="px-4 py-3 text-slate-700">Rp {Math.round(item.value).toLocaleString('id-ID')}</td><td className="px-4 py-3"><span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${item.stage==='deal'?'bg-emerald-100 text-emerald-700':item.stage==='lost'?'bg-red-100 text-red-700':'bg-amber-100 text-amber-700'}`}>{CRM_STATUS[item.stage as keyof typeof CRM_STATUS]??item.stage}</span></td><td className="px-4 py-3 text-slate-600">{item.probability}%</td><td className="px-4 py-3 text-slate-600">{item.offer_date??'-'}</td><td className="px-4 py-3 text-right"><button onClick={() => void remove(item)} className="rounded-lg p-2 text-slate-400 hover:bg-red-50 hover:text-red-600" title="Hapus"><Trash2 className="h-4 w-4" /></button></td></tr>))}{opportunities.length===0&&<tr><td colSpan={7} className="px-4 py-12 text-center text-slate-400">Belum ada penawaran.</td></tr>}</tbody></table></div>}
     <Drawer open={drawer.mode !== null} title="Penawaran Baru" onClose={drawer.close}>
       <form onSubmit={(e) => { void submit(e); }} className="space-y-4">
         <FormField label="Lead ID"><input className={fieldClass} value={form.lead_id} onChange={(e) => setForm({ ...form, lead_id: e.target.value })} placeholder="ID lead dari URL" required /></FormField>

@@ -4,7 +4,7 @@ import { FormEvent, useEffect, useState } from 'react';
 import { api, type PaginatedResponse } from '@/lib/api';
 import type { Finance } from '@/lib/types';
 import Link from 'next/link';
-import { CircleDollarSign, Eye, Pencil, Plus, Search, WalletCards } from 'lucide-react';
+import { CircleDollarSign, Eye, Pencil, Plus, Search, Trash2, WalletCards } from 'lucide-react';
 import type { Project } from '@/lib/types';
 import { Drawer, FormField, fieldClass } from '@/components/ui/Drawer';
 import { DrawerButtons } from '@/components/ui/DrawerButtons';
@@ -50,6 +50,7 @@ export default function FinancePage() {
   }, [drawer.id]);
   const openCreate = () => { setSelected(null); setForm({ project_id: '', total: '', dp: '0', termin1: '0', termin2: '0', termin3: '0', pelunasan: '0' }); drawer.open('create'); };
   const submit = async (event: FormEvent) => { event.preventDefault(); setSaving(true); setError(''); try { await api.post('/finance', { project_id: Number(form.project_id), total: Number(form.total), dp: Number(form.dp), termin1: Number(form.termin1), termin2: Number(form.termin2), termin3: Number(form.termin3), pelunasan: Number(form.pelunasan) }); await fetchFinances(); drawer.close(); } catch (err) { setError(err instanceof Error ? err.message : 'Finance gagal disimpan.'); } finally { setSaving(false); } };
+  const remove = async (item: Finance) => { if (!window.confirm(`Hapus data finance untuk "${item.project?.name || '-'}"?`)) return; setError(''); try { await api.delete(`/finance/project/${item.project_id}`); await fetchFinances(); } catch (err) { setError(err instanceof Error ? err.message : 'Finance gagal dihapus.'); } };
 
   const statusColor = (status: string) => {
     switch (status) {
@@ -147,7 +148,7 @@ export default function FinancePage() {
                         {finance.payment_status}
                       </span>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm"><div className="flex gap-2"><button onClick={() => drawer.open('show', finance.id)} className="rounded-lg p-2 text-slate-500 hover:bg-emerald-50 hover:text-emerald-600"><Eye size={16} /></button><button onClick={() => drawer.open('edit', finance.id)} className="rounded-lg p-2 text-slate-500 hover:bg-emerald-50 hover:text-emerald-600"><Pencil size={16} /></button></div>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm"><div className="flex gap-2"><button onClick={() => drawer.open('show', finance.id)} className="rounded-lg p-2 text-slate-500 hover:bg-emerald-50 hover:text-emerald-600"><Eye size={16} /></button><button onClick={() => drawer.open('edit', finance.id)} className="rounded-lg p-2 text-slate-500 hover:bg-emerald-50 hover:text-emerald-600"><Pencil size={16} /></button><button onClick={() => void remove(finance)} className="rounded-lg p-2 text-slate-500 hover:bg-red-50 hover:text-red-600" title="Hapus"><Trash2 size={16} /></button></div>
                     </td>
                   </tr>
                 ))}

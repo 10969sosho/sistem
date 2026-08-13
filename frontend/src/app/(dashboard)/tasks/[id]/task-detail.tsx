@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { api, type ApiResponse } from '@/lib/api';
 import type { Task } from '@/lib/types';
-import { TASK_PRIORITY, TASK_STATUS, TASK_TYPE } from '@/lib/types';
+import { TASK_PRIORITY, TASK_STATUS, TASK_TYPE, TASK_CABANG } from '@/lib/types';
 
 export default function TaskDetail() {
   const params = useParams<{ id: string }>();
@@ -107,6 +107,10 @@ export default function TaskDetail() {
             <div>
               <dt className="text-xs font-semibold uppercase tracking-wide text-slate-400">PIC</dt>
               <dd className="mt-1 text-sm font-medium text-slate-900">{task.pic || '-'}</dd>
+            </div>
+            <div>
+              <dt className="text-xs font-semibold uppercase tracking-wide text-slate-400">Cabang</dt>
+              <dd className="mt-1 text-sm font-medium text-slate-900">{task.cabang ? TASK_CABANG[task.cabang] : '-'}</dd>
             </div>
             <div>
               <dt className="text-xs font-semibold uppercase tracking-wide text-slate-400">Estimasi</dt>

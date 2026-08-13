@@ -4,7 +4,7 @@ import { FormEvent, useEffect, useState } from 'react';
 import { api, type PaginatedResponse } from '@/lib/api';
 import type { Hosting } from '@/lib/types';
 import Link from 'next/link';
-import { Eye, Globe2, Pencil, Plus, Search, Server } from 'lucide-react';
+import { Eye, Globe2, Pencil, Plus, Search, Server, Trash2 } from 'lucide-react';
 import type { Project } from '@/lib/types';
 import { Drawer, FormField, fieldClass } from '@/components/ui/Drawer';
 import { DrawerButtons } from '@/components/ui/DrawerButtons';
@@ -49,6 +49,7 @@ export default function HostingPage() {
   }, [drawer.id]);
   const openCreate = () => { setSelected(null); setForm({ project_id: '', provider: '', package: '', expired_date: '', domain: '', registrar: '', domain_expired_date: '', ssl_status: 'active', ssl_expired_date: '', server_ip: '', panel: '', username: '', notes: '' }); drawer.open('create'); };
   const submit = async (event: FormEvent) => { event.preventDefault(); setSaving(true); setError(''); try { await api.post('/hosting', { ...form, project_id: Number(form.project_id) }); await fetchHostings(); drawer.close(); } catch (err) { setError(err instanceof Error ? err.message : 'Hosting gagal disimpan.'); } finally { setSaving(false); } };
+  const remove = async (item: Hosting) => { if (!window.confirm(`Hapus data hosting untuk "${item.project?.name || '-'}"?`)) return; setError(''); try { await api.delete(`/hosting/project/${item.project_id}`); await fetchHostings(); } catch (err) { setError(err instanceof Error ? err.message : 'Hosting gagal dihapus.'); } };
 
   const statusColor = (status: string | null) => {
     switch (status) {
@@ -133,7 +134,7 @@ export default function HostingPage() {
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       {hosting.expired_date || '-'}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm"><div className="flex gap-2"><button onClick={() => drawer.open('show', hosting.id)} className="rounded-lg p-2 text-slate-500 hover:bg-blue-50 hover:text-blue-600"><Eye size={16} /></button><button onClick={() => drawer.open('edit', hosting.id)} className="rounded-lg p-2 text-slate-500 hover:bg-blue-50 hover:text-blue-600"><Pencil size={16} /></button></div>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm"><div className="flex gap-2"><button onClick={() => drawer.open('show', hosting.id)} className="rounded-lg p-2 text-slate-500 hover:bg-blue-50 hover:text-blue-600"><Eye size={16} /></button><button onClick={() => drawer.open('edit', hosting.id)} className="rounded-lg p-2 text-slate-500 hover:bg-blue-50 hover:text-blue-600"><Pencil size={16} /></button><button onClick={() => void remove(hosting)} className="rounded-lg p-2 text-slate-500 hover:bg-red-50 hover:text-red-600" title="Hapus"><Trash2 size={16} /></button></div>
                     </td>
                   </tr>
                 ))}
