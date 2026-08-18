@@ -97,12 +97,18 @@ Aplikasi web untuk membantu perusahaan software house mengelola customer, projec
 - **Zustand** - State Management
 - **Lucide React** - Icons
 
+### Repository Static Assets
+- `index.html`, `styles.css`, and `app.js` at the repository root provide a minimal static entry point for repository asset checks.
+
 ---
 
 ## 🏗 Arsitektur
 
 ### Backend Structure
 ```
+index.html                    # Minimal static asset-check entry point
+styles.css                    # Stylesheet referenced by index.html
+app.js                        # Script referenced by index.html
 backend/
 ├── app/
 │   ├── Http/
@@ -364,7 +370,7 @@ php artisan test --coverage
 cd frontend
 
 # Type check
-npm run type-check
+npx tsc --noEmit
 
 # Build production
 npm run build
