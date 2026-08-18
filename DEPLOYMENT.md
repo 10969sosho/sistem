@@ -35,6 +35,73 @@ git commit -m "..."
 git push origin main
 ```
 
+## Deploy Otomatis
+
+Otomasi tersedia melalui `scripts/deploy.sh`. Skrip menjalankan test backend
+dan production build frontend, kemudian menjalankan deploy di server melalui
+SSH.
+Di server skrip akan:
+
+1. Mengambil commit branch production terbaru secara fast-forward-safe.
+2. Memasang dependency production backend dan menjalankan migration.
+3. Meng-cache konfigurasi, route, view, dan event Laravel.
+4. Membuat static export frontend dengan `NEXT_PUBLIC_API_URL` production.
+5. Mempublikasikan `frontend/out` ke document root menggunakan `rsync --delete`.
+6. Menjalankan health check dan pemeriksaan endpoint utama.
+7. Menampilkan baris log Laravel terbaru.
+
+```bash
+./scripts/deploy.sh
+```
+
+Konfigurasi dapat dioverride tanpa mengubah source code:
+
+```bash
+DEPLOY_HOST=alurelab \
+DEPLOY_REPOSITORY='~/repositories/sistem' \
+DEPLOY_DOCROOT='~/qwe.solusisurabaya.com' \
+DEPLOY_BRANCH=main \
+DEPLOY_URL=https://qwe.solusisurabaya.com \
+./scripts/deploy.sh
+```
+
+`--skip-local-checks` hanya digunakan oleh CI setelah job test selesai. Host
+deployment harus memiliki `git`, `composer`, `php`, `npm`, `rsync`, dan akses
+SSH ke origin repository. File `.env` production tetap dikelola langsung di
+server dan tidak pernah disalin dari CI.
+
+### GitHub Actions
+
+Workflow `.github/workflows/deploy.yml` berjalan pada push ke `main` atau dapat
+dijalankan manual. Job `test` menjalankan seluruh test backend dan production
+build frontend. Job `deploy` memakai SSH dan kemudian menjalankan verifikasi
+yang sama di server. Lint frontend tetap dapat dijalankan terpisah dengan
+`npm run lint`, tetapi bukan gate deployment karena baseline project saat ini
+memiliki lint error yang tidak terkait proses deploy.
+
+Konfigurasi repository yang diperlukan:
+
+- Secret `DEPLOY_SSH_KEY`: private key deploy.
+- Secret `DEPLOY_KNOWN_HOSTS`: output `ssh-keyscan` untuk host deployment.
+- Secret `DEPLOY_HOST`: SSH host/alias yang dapat diakses runner.
+- Variable `DEPLOY_REPOSITORY`: default `~/repositories/sistem`.
+- Variable `DEPLOY_DOCROOT`: default `~/qwe.solusisurabaya.com`.
+- Variable `DEPLOY_URL`: default `https://qwe.solusisurabaya.com`.
+
+### Verifikasi Manual
+
+Verifier dapat dijalankan tanpa deploy untuk pemeriksaan ulang:
+
+```bash
+DEPLOY_LOG_FILE=backend/storage/logs/laravel.log \
+./scripts/verify-deployment.sh https://qwe.solusisurabaya.com
+```
+
+Pemeriksaan dianggap berhasil jika `/up`, `/`, dan `/customers` merespons
+`200`, sedangkan endpoint API terproteksi `/api/meta/enums` merespons `401`.
+Verifier juga mencetak cuplikan log Laravel terbaru dan gagal jika ada request
+yang tidak sesuai status yang diharapkan.
+
 ## Update Server
 
 ```bash
