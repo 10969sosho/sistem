@@ -84,4 +84,31 @@ class AuthTest extends TestCase
                 'message' => 'Logout berhasil.',
             ]);
     }
+
+    public function test_user_can_login_and_access_dashboard(): void
+    {
+        User::factory()->create([
+            'email' => 'dashboard@example.com',
+            'password' => bcrypt('password123'),
+        ]);
+
+        $login = $this->postJson('/api/login', [
+            'email' => 'dashboard@example.com',
+            'password' => 'password123',
+        ]);
+
+        $token = $login->json('data.token');
+
+        $this->withHeader('Authorization', "Bearer {$token}")
+            ->getJson('/api/dashboard')
+            ->assertOk()
+            ->assertJsonStructure([
+                'data' => [
+                    'date',
+                    'today_tasks',
+                    'overdue_tasks',
+                    'week_tasks',
+                ],
+            ]);
+    }
 }

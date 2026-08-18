@@ -373,6 +373,35 @@ npm run build
 npm start
 ```
 
+### Playwright UI Tests
+
+Playwright menjalankan browser Chromium lokal dan otomatis menyalakan Next.js dev server. API di-mock di level route agar pengujian UI deterministik dan tidak membutuhkan database atau backend yang sedang aktif.
+
+```bash
+cd frontend
+
+# Jalankan seluruh pengujian UI
+npm run test:e2e
+
+# Jalankan dengan browser terlihat
+npx playwright test --headed
+```
+
+Test UI mencakup redirect user tanpa autentikasi, login, rendering widget dashboard, dan logout.
+
+### Full Local Verification
+
+```bash
+cd backend
+APP_KEY='base64:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=' php artisan test
+
+cd ../frontend
+npm run build
+npm run test:e2e
+```
+
+`APP_KEY` hanya diperlukan jika environment lokal belum memiliki application key. Test backend menggunakan SQLite in-memory.
+
 ---
 
 ## 📸 Screenshots
