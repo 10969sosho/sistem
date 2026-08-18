@@ -14,3 +14,5 @@ Perbaiki fungsi Edit Leads.
 Saat edit, harus membuka form edit dengan data yang sudah terisi, bukan form create.
 Email Leads
 Hapus field/menu Email Leads.
+Status Leads
+Status lead sekarang dapat diubah langsung dari form Edit Lead dan halaman detail melalui endpoint status pipeline.

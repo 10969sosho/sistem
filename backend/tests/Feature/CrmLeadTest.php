@@ -30,4 +30,25 @@ class CrmLeadTest extends TestCase
             ->assertJsonPath('data.id', $lead->id)
             ->assertJsonPath('data.customer', null);
     }
+
+    public function test_can_change_lead_status(): void
+    {
+        $user = User::factory()->create();
+        $lead = Lead::create([
+            'name' => 'Lead Status',
+            'phone' => '081234567891',
+            'source' => 'whatsapp',
+            'requirement' => 'Landing page',
+            'entered_at' => today(),
+            'user_id' => $user->id,
+        ]);
+
+        $response = $this->actingAs($user, 'sanctum')
+            ->patchJson("/api/crm/leads/{$lead->id}/status", ['status' => 'interested']);
+
+        $response->assertOk()
+            ->assertJsonPath('data.status', 'interested')
+            ->assertJsonPath('data.status_label', 'Interested');
+        $this->assertDatabaseHas('leads', ['id' => $lead->id, 'status' => 'interested']);
+    }
 }

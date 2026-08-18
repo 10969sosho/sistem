@@ -14,7 +14,7 @@ const blankForm = { name: '', phone: '', company: '', source: 'meta_ads', requir
 export default function LeadsPage() {
   const [leads, setLeads] = useState<CrmLead[]>([]);
   const [lead, setLead] = useState<CrmLead | null>(null);
-  const [form, setForm] = useState(blankForm);
+  const [form, setForm] = useState({ ...blankForm, status: 'new' });
   const [search, setSearch] = useState('');
   const [filterStatus, setFilterStatus] = useState('');
   const [loading, setLoading] = useState(true);
@@ -39,17 +39,22 @@ export default function LeadsPage() {
     if (!drawer.id || drawer.mode === 'create') { setLead(null); return; }
     void api.get<{ data: CrmLead }>(`/crm/leads/${drawer.id}`).then((res) => {
       setLead(res.data);
-      setForm({ name: res.data.name, phone: res.data.phone, company: res.data.company ?? '', source: res.data.source, requirement: res.data.requirement, notes: res.data.notes ?? '', entered_at: res.data.entered_at });
+      setForm({ name: res.data.name, phone: res.data.phone, company: res.data.company ?? '', source: res.data.source, requirement: res.data.requirement, notes: res.data.notes ?? '', entered_at: res.data.entered_at, status: res.data.status });
     }).catch(() => setError('Gagal memuat detail lead.'));
   }, [drawer.id, drawer.mode]);
 
-  const openAdd = () => { setLead(null); setForm(blankForm); drawer.open('create'); };
+  const openAdd = () => { setLead(null); setForm({ ...blankForm, status: 'new' }); drawer.open('create'); };
 
   const submit = async (e: FormEvent) => {
     e.preventDefault(); setSaving(true); setError('');
     try {
-      if (drawer.mode === 'create') await api.post<{ data: CrmLead }>('/crm/leads', form);
-      else if (drawer.id) await api.put(`/crm/leads/${drawer.id}`, form);
+      if (drawer.mode === 'create') {
+        await api.post<{ data: CrmLead }>('/crm/leads', form);
+      } else if (drawer.id && lead) {
+        const { status, ...leadData } = form;
+        await api.put(`/crm/leads/${drawer.id}`, leadData);
+        if (status !== lead.status) await api.patch(`/crm/leads/${drawer.id}/status`, { status });
+      }
       drawer.close(); await load();
     } catch (err) {
       const msg = err instanceof Error ? err.message : 'Gagal menyimpan.';
@@ -79,6 +84,7 @@ export default function LeadsPage() {
         <FormField label="Telepon / WhatsApp"><input className={fieldClass} value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} required /></FormField>
         <FormField label="Perusahaan"><input className={fieldClass} value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} /></FormField>
         <FormField label="Source"><select className={fieldClass} value={form.source} onChange={(e) => setForm({ ...form, source: e.target.value })} required>{Object.entries(CRM_SOURCE).map(([k, v]) => <option key={k} value={k}>{v}</option>)}</select></FormField>
+        {drawer.mode === 'edit' && <FormField label="Status"><select className={fieldClass} value={form.status} onChange={(e) => setForm({ ...form, status: e.target.value })}>{Object.entries(CRM_STATUS).map(([k, v]) => <option key={k} value={k}>{v}</option>)}</select></FormField>}
         <FormField label="Kebutuhan"><textarea className={fieldClass} rows={3} value={form.requirement} onChange={(e) => setForm({ ...form, requirement: e.target.value })} required /></FormField>
         <FormField label="Catatan"><textarea className={fieldClass} rows={2} value={form.notes} onChange={(e) => setForm({ ...form, notes: e.target.value })} /></FormField>
         <FormField label="Tanggal Masuk"><input type="date" className={fieldClass} value={form.entered_at} onChange={(e) => setForm({ ...form, entered_at: e.target.value })} required /></FormField>

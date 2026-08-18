@@ -18,6 +18,7 @@ export default function LeadDetail() {
   const [error, setError] = useState('');
   const [actForm, setActForm] = useState(activityForm);
   const [savingAct, setSavingAct] = useState(false);
+  const [savingStatus, setSavingStatus] = useState(false);
 
   const load = useCallback(async () => {
     setLoading(true); setError('');
@@ -36,9 +37,10 @@ export default function LeadDetail() {
   };
 
   const changeStatusQuick = async (status: string) => {
-    setError('');
+    setSavingStatus(true); setError('');
     try { await api.patch(`/crm/leads/${params.id}/status`, { status }); await load(); }
     catch (err) { setError(err instanceof Error ? err.message : 'Gagal mengubah status.'); }
+    finally { setSavingStatus(false); }
   };
 
   if (loading) return <div className="py-20 text-center text-sm text-slate-500">Memuat detail lead...</div>;
@@ -72,7 +74,7 @@ export default function LeadDetail() {
           <div className="rounded-xl border border-slate-200 bg-white p-5"><h3 className="font-semibold text-slate-800 mb-4">Quick Status</h3>
             <div className="flex flex-wrap gap-2">
               {Object.entries(CRM_STATUS).map(([key, label]) => (
-                <button key={key} disabled={lead.status===key} onClick={()=>changeStatusQuick(key)} className={`rounded-full px-3 py-1.5 text-xs font-semibold border transition-colors ${lead.status===key?'bg-slate-100 text-slate-400 border-slate-200 cursor-default':'bg-white text-slate-600 border-slate-300 hover:border-blue-400 hover:text-blue-700'}`}>{label}</button>
+                <button type="button" key={key} disabled={savingStatus || lead.status===key} onClick={()=>void changeStatusQuick(key)} className={`rounded-full px-3 py-1.5 text-xs font-semibold border transition-colors ${lead.status===key?'bg-slate-100 text-slate-400 border-slate-200 cursor-default':'bg-white text-slate-600 border-slate-300 hover:border-blue-400 hover:text-blue-700 disabled:opacity-50'}`}>{label}</button>
               ))}
             </div>
           </div>
