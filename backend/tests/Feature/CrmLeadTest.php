@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\Activity;
 use App\Models\Lead;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -29,6 +30,32 @@ class CrmLeadTest extends TestCase
         $response->assertOk()
             ->assertJsonPath('data.id', $lead->id)
             ->assertJsonPath('data.customer', null);
+    }
+
+    public function test_lead_detail_includes_activity_timeline(): void
+    {
+        $user = User::factory()->create();
+        $lead = Lead::create([
+            'name' => 'Lead Dengan Aktivitas',
+            'phone' => '081234567892',
+            'source' => 'whatsapp',
+            'requirement' => 'Website company profile',
+            'entered_at' => today(),
+            'user_id' => $user->id,
+        ]);
+        Activity::create([
+            'user_id' => $user->id,
+            'lead_id' => $lead->id,
+            'type' => 'whatsapp',
+            'description' => 'Follow-up pertama.',
+        ]);
+
+        $response = $this->actingAs($user, 'sanctum')
+            ->getJson("/api/crm/leads/{$lead->id}");
+
+        $response->assertOk()
+            ->assertJsonPath('data.activities.0.lead_id', $lead->id)
+            ->assertJsonPath('data.activities.0.description', 'Follow-up pertama.');
     }
 
     public function test_can_change_lead_status(): void

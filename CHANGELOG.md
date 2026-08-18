@@ -2,6 +2,7 @@
 
 ## 2026-08-18
 
+- Memperbaiki pemuatan timeline aktivitas pada detail CRM Lead agar tetap aman ketika relasi lead pada aktivitas sudah tidak tersedia.
 - Menambahkan entry point HTML serta stylesheet dan script minimal di root untuk memenuhi pemeriksaan asset statis repository.
 - Memperbaiki endpoint detail CRM Leads agar lead yang belum terhubung ke customer tetap dapat dimuat.
 - Menambahkan regresi test untuk detail lead tanpa customer.
