@@ -52,7 +52,7 @@ class CrmService
 
     public function findLead(User $user, int $id): Lead
     {
-        return $this->leadQuery($user)->with(['activities' => fn (Builder $query) => $query->latest(), 'opportunities' => fn (Builder $query) => $query->latest(), 'customer'])->findOrFail($id);
+        return $this->leadQuery($user)->with(['activities' => fn ($query) => $query->latest(), 'opportunities' => fn ($query) => $query->latest(), 'customer'])->findOrFail($id);
     }
 
     public function createLead(User $user, array $data): Lead

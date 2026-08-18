@@ -8,7 +8,7 @@ Setelah memilih cabang, tampilkan daftar task yang tersedia.
 Delete Action
 Tambahkan action Delete pada seluruh data/modul yang membutuhkan.
 Detail Leads
-Perbaiki tombol Open Detail agar dapat membuka detail leads.
+Perbaiki tombol Open Detail agar dapat membuka detail leads. Selesai: response detail aman untuk lead tanpa customer.
 Edit Leads
 Perbaiki fungsi Edit Leads.
 Saat edit, harus membuka form edit dengan data yang sudah terisi, bukan form create.
