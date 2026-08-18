@@ -9,6 +9,17 @@ class ActivityResource extends JsonResource
 {
     public function toArray(Request $request): array
     {
-        return ['id' => $this->id, 'lead_id' => $this->lead_id, 'type' => $this->type, 'description' => $this->description, 'created_at' => $this->created_at?->format('Y-m-d\TH:i:sP'), 'lead' => $this->whenLoaded('lead', fn () => ['id' => $this->lead->id, 'name' => $this->lead->name, 'status' => $this->lead->status])];
+        return [
+            'id' => $this->id,
+            'lead_id' => $this->lead_id,
+            'type' => $this->type,
+            'description' => $this->description,
+            'created_at' => $this->created_at?->toISOString(),
+            'lead' => $this->whenLoaded('lead', fn () => $this->lead ? [
+                'id' => $this->lead->id,
+                'name' => $this->lead->name,
+                'status' => $this->lead->status,
+            ] : null),
+        ];
     }
 }
