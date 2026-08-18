@@ -4,7 +4,7 @@ import { FormEvent, useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Plus, Search, Trash2 } from 'lucide-react';
 import { api, type PaginatedResponse } from '@/lib/api';
-import type { CrmOpportunity } from '@/lib/types';
+import type { CrmLead, CrmOpportunity } from '@/lib/types';
 import { CRM_STATUS } from '@/lib/types';
 import { Drawer, FormField, fieldClass } from '@/components/ui/Drawer';
 import { DrawerButtons } from '@/components/ui/DrawerButtons';
@@ -14,10 +14,12 @@ const blankForm = { lead_id: '', title: '', value: '', offer_date: new Date().to
 
 export default function OpportunitiesPage() {
   const [opportunities, setOpportunities] = useState<CrmOpportunity[]>([]);
+  const [leads, setLeads] = useState<CrmLead[]>([]);
   const [form, setForm] = useState(blankForm);
   const [search, setSearch] = useState('');
   const [filterStage, setFilterStage] = useState('');
   const [loading, setLoading] = useState(true);
+  const [leadsLoading, setLeadsLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
   const drawer = useDrawer();
@@ -35,6 +37,19 @@ export default function OpportunitiesPage() {
 
   useEffect(() => { void load(); }, [load]);
 
+  const loadLeads = useCallback(async () => {
+    setLeadsLoading(true);
+    try {
+      setLeads((await api.get<PaginatedResponse<CrmLead>>('/crm/leads', { per_page: 100 })).data);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Daftar leads gagal dimuat.');
+    } finally {
+      setLeadsLoading(false);
+    }
+  }, []);
+
+  useEffect(() => { void loadLeads(); }, [loadLeads]);
+
   const remove = async (item: CrmOpportunity) => {
     if (!window.confirm(`Hapus penawaran "${item.title}"?`)) return;
     setError('');
@@ -44,7 +59,7 @@ export default function OpportunitiesPage() {
 
   const submit = async (e: FormEvent) => {
     e.preventDefault(); setSaving(true); setError('');
-    try { await api.post('/crm/opportunities', { ...form, value: Number(form.value) }); drawer.close(); await load(); }
+    try { await api.post('/crm/opportunities', { ...form, lead_id: Number(form.lead_id), value: Number(form.value) }); drawer.close(); await load(); }
     catch (err) {
       const msg = err instanceof Error ? err.message : 'Gagal menyimpan.';
       const details = (err as { data?: { errors?: Record<string, string[]> } })?.data?.errors;
@@ -69,7 +84,7 @@ export default function OpportunitiesPage() {
     {loading ? <div className="py-12 text-center text-sm text-slate-500">Memuat pipeline...</div> : <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white"><table className="min-w-full text-sm"><thead><tr className="text-left text-xs uppercase text-slate-400 border-b"><th className="px-4 py-3">Judul</th><th className="px-4 py-3">Lead</th><th className="px-4 py-3">Value</th><th className="px-4 py-3">Stage</th><th className="px-4 py-3">Prob</th><th className="px-4 py-3">Tanggal</th><th className="px-4 py-3"></th></tr></thead><tbody>{opportunities.map((item) => (<tr key={item.id} className="border-b border-slate-50 hover:bg-slate-50/50"><td className="px-4 py-3 font-medium text-slate-800">{item.title}</td><td className="px-4 py-3 text-slate-600">{item.lead ? <Link href={`/crm/leads/${item.lead.id}`} className="text-blue-600 hover:underline">{item.lead.name}</Link> : '-'}</td><td className="px-4 py-3 text-slate-700">Rp {Math.round(item.value).toLocaleString('id-ID')}</td><td className="px-4 py-3"><span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${item.stage==='deal'?'bg-emerald-100 text-emerald-700':item.stage==='lost'?'bg-red-100 text-red-700':'bg-amber-100 text-amber-700'}`}>{CRM_STATUS[item.stage as keyof typeof CRM_STATUS]??item.stage}</span></td><td className="px-4 py-3 text-slate-600">{item.probability}%</td><td className="px-4 py-3 text-slate-600">{item.offer_date??'-'}</td><td className="px-4 py-3 text-right"><button onClick={() => void remove(item)} className="rounded-lg p-2 text-slate-400 hover:bg-red-50 hover:text-red-600" title="Hapus"><Trash2 className="h-4 w-4" /></button></td></tr>))}{opportunities.length===0&&<tr><td colSpan={7} className="px-4 py-12 text-center text-slate-400">Belum ada penawaran.</td></tr>}</tbody></table></div>}
     <Drawer open={drawer.mode !== null} title="Penawaran Baru" onClose={drawer.close}>
       <form onSubmit={(e) => { void submit(e); }} className="space-y-4">
-        <FormField label="Lead ID"><input className={fieldClass} value={form.lead_id} onChange={(e) => setForm({ ...form, lead_id: e.target.value })} placeholder="ID lead dari URL" required /></FormField>
+        <FormField label="Lead"><select className={fieldClass} value={form.lead_id} onChange={(e) => setForm({ ...form, lead_id: e.target.value })} required disabled={leadsLoading}><option value="">{leadsLoading ? 'Memuat leads...' : 'Pilih lead'}</option>{leads.map((lead) => <option key={lead.id} value={lead.id}>{lead.name} (ID: {lead.id}){lead.company ? ` - ${lead.company}` : ''}</option>)}</select></FormField>
         <FormField label="Judul Penawaran"><input className={fieldClass} value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} required /></FormField>
         <FormField label="Nilai (Rp)"><input type="number" className={fieldClass} value={form.value} onChange={(e) => setForm({ ...form, value: e.target.value })} required /></FormField>
         <FormField label="Tanggal Kirim"><input type="date" className={fieldClass} value={form.offer_date} onChange={(e) => setForm({ ...form, offer_date: e.target.value })} required /></FormField>
