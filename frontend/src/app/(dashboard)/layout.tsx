@@ -4,13 +4,14 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useAuthStore } from '@/lib/auth-store';
 import { useEffect } from 'react';
-import { BarChart3, CheckSquare, ChevronRight, CircleDollarSign, Handshake, LayoutDashboard, LogOut, Server, Users, BriefcaseBusiness } from 'lucide-react';
+import { BarChart3, CheckSquare, ChevronRight, CircleDollarSign, Handshake, LayoutDashboard, ListChecks, LogOut, Server, Users, BriefcaseBusiness } from 'lucide-react';
 
 const navigation = [
   { name: 'Dashboard', href: '/', icon: LayoutDashboard },
   { name: 'Customers', href: '/customers', icon: Users },
   { name: 'Projects', href: '/projects', icon: BriefcaseBusiness },
   { name: 'Tasks', href: '/tasks', icon: CheckSquare },
+  { name: 'All Tasks', href: '/tasks/all', icon: ListChecks },
   { name: 'Hosting', href: '/hosting', icon: Server },
   { name: 'Finance', href: '/finance', icon: CircleDollarSign },
   { name: 'CRM', href: '/crm', icon: Handshake },

@@ -44,6 +44,8 @@ export interface Task {
   priority: 'low' | 'medium' | 'high' | 'urgent';
   status: 'todo' | 'progress' | 'waiting' | 'done';
   cabang: 'tian' | 'cecil' | null;
+  finished_at: string | null;
+  is_finished: boolean;
   pic: string | null;
   deadline: string | null;
   estimate: string | null;
