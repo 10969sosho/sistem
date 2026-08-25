@@ -19,6 +19,8 @@ class TaskResource extends JsonResource
             'priority' => $this->priority,
             'status' => $this->status,
             'cabang' => $this->cabang,
+            'finished_at' => $this->finished_at?->toISOString(),
+            'is_finished' => $this->finished_at !== null,
             'pic' => $this->pic,
             'deadline' => $this->deadline?->format('Y-m-d'),
             'estimate' => $this->estimate,

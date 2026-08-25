@@ -34,6 +34,8 @@ class TaskController extends Controller
             'overdue',
             'due_today',
             'due_upcoming',
+            'include_finished',
+            'finished',
             'sort_by',
             'sort_dir',
             'per_page',

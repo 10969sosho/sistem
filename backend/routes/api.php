@@ -7,12 +7,16 @@ use App\Http\Controllers\Api\DashboardController;
 use App\Http\Controllers\Api\FinanceController;
 use App\Http\Controllers\Api\HostingController;
 use App\Http\Controllers\Api\MetaController;
+use App\Http\Controllers\Api\PublicTaskController;
 use App\Http\Controllers\Api\ProjectController;
 use App\Http\Controllers\Api\SearchController;
 use App\Http\Controllers\Api\TaskController;
 use Illuminate\Support\Facades\Route;
 
 Route::post('/login', [AuthController::class, 'login']);
+
+// API publik tanpa auth (read-only) untuk agent eksternal.
+Route::get('/public/tasks', [PublicTaskController::class, 'index']);
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);

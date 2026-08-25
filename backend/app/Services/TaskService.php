@@ -35,6 +35,8 @@ class TaskService
             $data['customer_id'] = $project?->customer_id;
         }
 
+        $this->applyFinishedState($data);
+
         return $this->repository->create($data);
     }
 
@@ -47,14 +49,36 @@ class TaskService
             $data['customer_id'] = $project?->customer_id;
         }
 
+        $this->applyFinishedState($data, $task);
+
         return $this->repository->update($task, $data);
     }
 
     public function changeStatus(int $id, string $status): Task
     {
-        return $this->repository->update($this->repository->findOrFail($id), [
-            'status' => $status,
-        ]);
+        $data = ['status' => $status];
+        $this->applyFinishedState($data);
+
+        return $this->repository->update($this->repository->findOrFail($id), $data);
+    }
+
+    /**
+     * Sinkronkan kolom finished_at dengan status task:
+     * status "done" berarti sudah dicek/finish; status lain mengosongkannya.
+     */
+    private function applyFinishedState(array &$data, ?Task $task = null): void
+    {
+        if (! array_key_exists('status', $data)) {
+            return;
+        }
+
+        if ($data['status'] === 'done') {
+            $data['finished_at'] = $task?->finished_at ?? now();
+
+            return;
+        }
+
+        $data['finished_at'] = null;
     }
 
     public function delete(int $id): void

@@ -28,6 +28,8 @@ class TaskRepository extends BaseRepository
      *     overdue?: bool,
      *     due_today?: bool,
      *     due_upcoming?: bool,
+     *     include_finished?: bool,
+     *     finished?: bool,
      * }  $filters
      */
     public function filter(array $filters): Builder
@@ -35,6 +37,15 @@ class TaskRepository extends BaseRepository
         $query = $this->query()
             ->with(['customer:id,name,pic_name,whatsapp,email,status'])
             ->with(['project:id,name,status,customer_id', 'project.customer:id,name']);
+
+        // Secara default, task yang sudah finish (sudah dicek) disembunyikan
+        // dari list utama. Gunakan include_finished=1 untuk melihat semua,
+        // atau finished=1 untuk hanya melihat yang sudah finish.
+        if (! empty($filters['finished'])) {
+            $query->whereNotNull('tasks.finished_at');
+        } elseif (empty($filters['include_finished'])) {
+            $query->whereNull('tasks.finished_at');
+        }
 
         $this->applySearch($query, $filters['search'] ?? null);
 
