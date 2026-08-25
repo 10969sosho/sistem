@@ -20,8 +20,8 @@ class CustomerResource extends JsonResource
             'status' => $this->status,
             'notes' => $this->notes,
             'projects_count' => $this->whenCounted('projects'),
-            'created_at' => $this->created_at?->toISOString(),
-            'updated_at' => $this->updated_at?->toISOString(),
+            'created_at' => $this->created_at?->format('Y-m-d\TH:i:sP'),
+            'updated_at' => $this->updated_at?->format('Y-m-d\TH:i:sP'),
             'projects' => ProjectResource::collection($this->whenLoaded('projects')),
         ];
     }

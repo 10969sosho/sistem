@@ -29,9 +29,9 @@ class PublicTaskController extends Controller
                     : ($task->status === 'todo' || $task->status === 'waiting' ? 'not_started' : 'on_going'),
                 'owner' => $task->cabang !== null ? strtoupper($task->cabang) : null,
                 'due_date' => $task->deadline?->format('Y-m-d'),
-                'finished_at' => $task->finished_at?->toISOString(),
-                'created_at' => $task->created_at?->toISOString(),
-                'updated_at' => $task->updated_at?->toISOString(),
+                'finished_at' => $task->finished_at?->format('Y-m-d\TH:i:sP'),
+                'created_at' => $task->created_at?->format('Y-m-d\TH:i:sP'),
+                'updated_at' => $task->updated_at?->format('Y-m-d\TH:i:sP'),
             ]),
         ]);
     }

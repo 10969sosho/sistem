@@ -25,6 +25,30 @@ class TaskTest extends TestCase
         $this->project = Project::factory()->create(['customer_id' => $this->customer->id]);
     }
 
+    public function test_task_timestamps_serialized_with_jakarta_offset(): void
+    {
+        $task = Task::factory()->create([
+            'customer_id' => $this->customer->id,
+            'project_id' => $this->project->id,
+            'status' => 'done',
+            'finished_at' => now(),
+        ]);
+
+        config(['app.timezone' => 'Asia/Jakarta']);
+        $task->refresh();
+
+        $response = $this->actingAs($this->user, 'sanctum')
+            ->getJson('/api/tasks/'.$task->id);
+
+        $response->assertStatus(200);
+
+        foreach (['created_at', 'updated_at', 'finished_at'] as $field) {
+            $value = $response->json("data.$field");
+            $this->assertNotNull($value);
+            $this->assertMatchesRegularExpression('/\+07:00$/', $value, "Field $field should end with +07:00 offset");
+        }
+    }
+
     public function test_can_list_tasks(): void
     {
         Task::factory(5)->create([

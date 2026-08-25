@@ -33,8 +33,8 @@ class HostingResource extends JsonResource
             'domain_status' => $this->domain_expired_date
                 ? ($this->domain_expired_date->isBefore($today) ? 'expired' : ($this->domain_expired_date->isBefore($within30) ? 'expiring' : 'active'))
                 : null,
-            'created_at' => $this->created_at?->toISOString(),
-            'updated_at' => $this->updated_at?->toISOString(),
+            'created_at' => $this->created_at?->format('Y-m-d\TH:i:sP'),
+            'updated_at' => $this->updated_at?->format('Y-m-d\TH:i:sP'),
             'project' => new ProjectResource($this->whenLoaded('project')),
         ];
     }

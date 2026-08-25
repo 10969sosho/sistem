@@ -21,8 +21,8 @@ class FinanceResource extends JsonResource
             'total_paid' => (float) $this->total_paid,
             'remaining' => (float) $this->remaining,
             'payment_status' => $this->payment_status,
-            'created_at' => $this->created_at?->toISOString(),
-            'updated_at' => $this->updated_at?->toISOString(),
+            'created_at' => $this->created_at?->format('Y-m-d\TH:i:sP'),
+            'updated_at' => $this->updated_at?->format('Y-m-d\TH:i:sP'),
             'project' => new ProjectResource($this->whenLoaded('project')),
         ];
     }

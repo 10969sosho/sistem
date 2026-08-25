@@ -19,7 +19,7 @@ class TaskResource extends JsonResource
             'priority' => $this->priority,
             'status' => $this->status,
             'cabang' => $this->cabang,
-            'finished_at' => $this->finished_at?->toISOString(),
+            'finished_at' => $this->finished_at?->format('Y-m-d\TH:i:sP'),
             'is_finished' => $this->finished_at !== null,
             'pic' => $this->pic,
             'deadline' => $this->deadline?->format('Y-m-d'),
@@ -28,8 +28,8 @@ class TaskResource extends JsonResource
             'is_overdue' => $this->deadline !== null
                 && $this->status !== 'done'
                 && $this->deadline->isBefore(now()->startOfDay()),
-            'created_at' => $this->created_at?->toISOString(),
-            'updated_at' => $this->updated_at?->toISOString(),
+            'created_at' => $this->created_at?->format('Y-m-d\TH:i:sP'),
+            'updated_at' => $this->updated_at?->format('Y-m-d\TH:i:sP'),
             'customer' => new CustomerResource($this->whenLoaded('customer')),
             'project' => new ProjectResource($this->whenLoaded('project')),
         ];
