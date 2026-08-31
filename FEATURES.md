@@ -494,3 +494,10 @@ Struktur aplikasi sudah disiapkan untuk integrasi dengan layanan eksternal.
 ---
 
 **Dokumentasi ini akan di-update seiring dengan penambahan fitur baru.**
+
+## 11. CRM Pipeline - Pemilihan Lead
+
+Form **Penawaran Baru** pada menu Pipeline menggunakan field `LEAD ID` berbentuk dropdown.
+Daftar option diambil dari `GET /api/crm/leads` dan hanya menampilkan leads milik user yang sedang login.
+Dropdown menampilkan nama lead, ID, dan perusahaan jika tersedia, serta dinonaktifkan saat daftar sedang dimuat atau belum memiliki lead.
+API juga memvalidasi kepemilikan `lead_id` sebelum membuat opportunity.

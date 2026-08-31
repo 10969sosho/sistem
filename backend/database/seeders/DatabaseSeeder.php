@@ -159,6 +159,8 @@ class DatabaseSeeder extends Seeder
         ];
 
         // Create customers and projects
+        $this->call(KeuanganSeeder::class);
+
         foreach ($customerProjects as $customerName => $projects) {
             $customer = Customer::factory()->create([
                 'name' => $customerName,

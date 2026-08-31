@@ -1,0 +1,6581 @@
+{
+  "spreadsheet": {
+    "name": "KEUANGAN",
+    "id": "1rF3unYFSpQFndkIsGDd9jw0IM5UlwNlOXjOMBkUEVr4",
+    "url": "https://docs.google.com/spreadsheets/d/1rF3unYFSpQFndkIsGDd9jw0IM5UlwNlOXjOMBkUEVr4/edit"
+  },
+  "exported_at": "2026-08-31T12:23:32.919Z",
+  "sheets": [
+    {
+      "name": "DASHBOARD",
+      "sheet_id": 0,
+      "rows": 1005,
+      "columns": 26,
+      "last_row": 34,
+      "last_column": 8,
+      "hidden": false,
+      "data": [
+        [
+          "LAPORAN KEUANGAN AGUSTUS 2026",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Keterangan",
+          "Nominal",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "SEPTEMBER",
+          "",
+          "OKTOBER",
+          "",
+          "September"
+        ],
+        [
+          "PENDAPATAN",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Pendapatan Penjualan",
+          0,
+          "",
+          1950000,
+          "jomoto",
+          1950000,
+          "jomoto",
+          ""
+        ],
+        [
+          "Pendapatan Project",
+          2250000,
+          "",
+          300000,
+          "formula",
+          300000,
+          "formula",
+          300000
+        ],
+        [
+          "Pendapatan Maintenance",
+          0,
+          "",
+          2500000,
+          "payroll",
+          100000000,
+          "",
+          ""
+        ],
+        [
+          "Pendapatan Lainnya",
+          0,
+          "",
+          6000000,
+          "kbkb",
+          "",
+          "",
+          ""
+        ],
+        [
+          "TOTAL PENDAPATAN",
+          2250000,
+          "",
+          10750000,
+          "",
+          102250000,
+          "",
+          300000
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "BEBAN OPERASIONAL",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Beban Gaji",
+          2025000,
+          "",
+          4000000,
+          "",
+          4000000,
+          "",
+          4000000
+        ],
+        [
+          "Beban Marketing",
+          1347000,
+          "",
+          2500000,
+          "",
+          2500000,
+          "",
+          2500000
+        ],
+        [
+          "Beban Maintanance",
+          384000,
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Beban AI",
+          499859,
+          "",
+          500000,
+          "",
+          500000,
+          "",
+          500000
+        ],
+        [
+          "Beban Software",
+          0,
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Beban Transportasi",
+          0,
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Beban Operasional Kantor",
+          0,
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Beban Pajak",
+          0,
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Beban Peralatan",
+          0,
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Beban Lainnya",
+          0,
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "TOTAL BEBAN OPERASIONAL",
+          4255859,
+          "",
+          7000000,
+          "",
+          7000000,
+          "",
+          7000000
+        ],
+        [
+          "LABA / RUGI OPERASIONAL",
+          -2005859,
+          "",
+          3750000,
+          "",
+          99000000,
+          "",
+          92300000
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "ARUS KAS",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Kas Masuk",
+          2250000,
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Kas Keluar",
+          4255859,
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Saldo Kas",
+          -2005859,
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "KEWAJIBAN",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hutang Belum Dibayar",
+          3906826,
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hutang Sudah Dibayar",
+          300000,
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hutang CECIL",
+          201000,
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Hutang TIAN",
+          4005826,
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "formulas": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF(AGUSTUS!C:C,\"Pendapatan Penjualan\",AGUSTUS!F:F)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF(AGUSTUS!C:C,\"Pendapatan Project\",AGUSTUS!F:F)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF(AGUSTUS!C:C,\"Pendapatan Maintenance\",AGUSTUS!F:F)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF(AGUSTUS!C:C,\"Pendapatan Lainnya\",AGUSTUS!F:F)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUM(B4:B7)",
+          "",
+          "=SUM(D5:D8)",
+          "",
+          "=SUM(F5:F8)",
+          "",
+          "=SUM(H5:H8)"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF(AGUSTUS!C:C,\"Beban Gaji\",AGUSTUS!F:F)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF(AGUSTUS!C:C,\"Beban Marketing\",AGUSTUS!F:F)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF(AGUSTUS!C:C,\"Beban Maintanance\",AGUSTUS!F:F)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF(AGUSTUS!C:C,\"Beban AI\",AGUSTUS!F:F)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF(AGUSTUS!C:C,\"Beban Software\",AGUSTUS!F:F)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF(AGUSTUS!C:C,\"Beban Transportasi\",AGUSTUS!F:F)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF(AGUSTUS!C:C,\"Beban Operasional Kantor\",AGUSTUS!F:F)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF(AGUSTUS!C:C,\"Beban Pajak\",AGUSTUS!F:F)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF(AGUSTUS!C:C,\"Beban Peralatan\",AGUSTUS!F:F)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF(AGUSTUS!C:C,\"Beban Lainnya\",AGUSTUS!F:F)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUM(B10:B19)",
+          "",
+          "=sum(D12:D21)",
+          "",
+          "=sum(F12:F21)",
+          "",
+          "=sum(H12:H21)"
+        ],
+        [
+          "",
+          "=B9-B22",
+          "",
+          "=D9-D22",
+          "",
+          "=F9-F22+D23",
+          "",
+          "=H9-H22+F23"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF(AGUSTUS!B:B,\"Pemasukan\",AGUSTUS!F:F)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF(AGUSTUS!B:B,\"Pengeluaran\",AGUSTUS!F:F)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=B23-B24",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF('HUTANG ke OWNER'!F:F,\"Belum Dibayar\",'HUTANG ke OWNER'!E:E)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF('HUTANG ke OWNER'!F:F,\"Lunas\",'HUTANG ke OWNER'!E:E)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF('HUTANG ke OWNER'!C:C,\"CECIL\",'HUTANG ke OWNER'!E:E)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "=SUMIF('HUTANG ke OWNER'!C:C,\"TIAN\",'HUTANG ke OWNER'!E:E)",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "merged_ranges": [],
+      "validations": []
+    },
+    {
+      "name": "HUTANG ke OWNER",
+      "sheet_id": 902482557,
+      "rows": 1016,
+      "columns": 27,
+      "last_row": 24,
+      "last_column": 7,
+      "hidden": false,
+      "data": [
+        [
+          "Tanggal",
+          "Jenis",
+          "Kepada",
+          "Keterangan",
+          "Nominal",
+          "Status",
+          "Tanggal Dibayar"
+        ],
+        [
+          "",
+          "Talangan",
+          "TIAN",
+          "Pindah Hosting ke NATA",
+          800000,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "",
+          "Talangan",
+          "TIAN",
+          "Content Creator IG ",
+          300000,
+          "Lunas",
+          ""
+        ],
+        [
+          "",
+          "Talangan",
+          "TIAN",
+          "Content Creator IG ",
+          50000,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "",
+          "Talangan",
+          "TIAN",
+          "CHATGPT Juli",
+          75000,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "",
+          "Talangan",
+          "TIAN",
+          "Domain jayapetir.com",
+          181200,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "",
+          "Talangan",
+          "TIAN",
+          "Ke Surabaya 3 Juli",
+          250000,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "3 Juli 2026",
+          "Talangan",
+          "TIAN",
+          "Deepseek",
+          39103,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "6 Juli 2026",
+          "Talangan",
+          "TIAN",
+          "Deepseek",
+          97573,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "11 Juli 2026",
+          "Talangan",
+          "TIAN",
+          "Open ai",
+          102881,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "14 Juli 2026",
+          "Talangan",
+          "TIAN",
+          "Deepseek",
+          39420,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "14 Juli 2026",
+          "Talangan",
+          "TIAN",
+          "Deepseek",
+          59130,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "15 Juli 2026",
+          "Talangan",
+          "TIAN",
+          "Open ai",
+          32500,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "18 Juli 2026",
+          "Talangan",
+          "TIAN",
+          "Deepseek",
+          97953,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "23 Juli 2026",
+          "Talangan",
+          "TIAN",
+          "Opencode Anomaly",
+          93066,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "27 Juli 2026",
+          "Talangan",
+          "TIAN",
+          "Ai Jelek",
+          8000,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "27 Juli 2026",
+          "Talangan",
+          "TIAN",
+          "Ke Surabaya 27 Juli",
+          250000,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "Agustus 2026",
+          "Talangan",
+          "CECIL",
+          "Meta Ads ke-1",
+          178000,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "Agustus 2026",
+          "Talangan",
+          "TIAN",
+          "Meta Ads ke-2",
+          390000,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "Agustus 2026",
+          "Talangan",
+          "TIAN",
+          "Meta Ads ke-3",
+          389000,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "Agustus 2026",
+          "Talangan",
+          "TIAN",
+          "Meta Ads ke-4",
+          390000,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "Agustus 2026",
+          "Talangan",
+          "TIAN",
+          "Hosting Rumah Web",
+          124000,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "Agustus 2026",
+          "Talangan",
+          "TIAN",
+          "Perpanjang Domain Solusi",
+          237000,
+          "Belum Dibayar",
+          ""
+        ],
+        [
+          "Agustus 2026",
+          "Talangan",
+          "CECIL",
+          "Domain jayapetir.online",
+          23000,
+          "Belum Dibayar",
+          ""
+        ]
+      ],
+      "formulas": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "merged_ranges": [],
+      "validations": [
+        {
+          "cell": "B2",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C2",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F2",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B3",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C3",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F3",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B4",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C4",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F4",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B5",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C5",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F5",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B6",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C6",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F6",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B7",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C7",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F7",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B8",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C8",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F8",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B9",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C9",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F9",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B10",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C10",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F10",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B11",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C11",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F11",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B12",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C12",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F12",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B13",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C13",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F13",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B14",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C14",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F14",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B15",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C15",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F15",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B16",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C16",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F16",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B17",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C17",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F17",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B18",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C18",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F18",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B19",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C19",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F19",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B20",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C20",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F20",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B21",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C21",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F21",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B22",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C22",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F22",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B23",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C23",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F23",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "B24",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Talangan",
+              "Pinjaman",
+              "Reimburse"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C24",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "CECIL",
+              "TIAN"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "F24",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Belum Dibayar",
+              "Dibayar Sebagian",
+              "Lunas"
+            ],
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "name": "JANUARI",
+      "sheet_id": 1065548977,
+      "rows": 1000,
+      "columns": 26,
+      "last_row": 3,
+      "last_column": 8,
+      "hidden": false,
+      "data": [
+        [
+          "Tanggal",
+          "Jenis",
+          "Kategori",
+          "Keterangan",
+          "Customer/Vendor",
+          "Nominal",
+          "Status",
+          "Metode Pembayaran"
+        ],
+        [
+          "29/01/26",
+          "Pemasukan",
+          "Pendapatan Project",
+          "",
+          "Project Pak Rudi",
+          8000000,
+          "",
+          ""
+        ],
+        [
+          "30/01/26",
+          "Pemasukan",
+          "Pendapatan Project",
+          "",
+          "Project Bu Vania (Termin 2)",
+          2000000,
+          "",
+          ""
+        ]
+      ],
+      "formulas": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "merged_ranges": [],
+      "validations": [
+        {
+          "cell": "B2",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B3",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FEBRUARI",
+      "sheet_id": 1185214786,
+      "rows": 1000,
+      "columns": 26,
+      "last_row": 2,
+      "last_column": 8,
+      "hidden": false,
+      "data": [
+        [
+          "Tanggal",
+          "Jenis",
+          "Kategori",
+          "Keterangan",
+          "Customer/Vendor",
+          "Nominal",
+          "Status",
+          "Metode Pembayaran"
+        ],
+        [
+          "2026-02-01T17:00:00.000Z",
+          "Pemasukan",
+          "Pendapatan Project",
+          "",
+          "Project PT PAS - Pak Effendi (Termin 1)",
+          6400000,
+          "",
+          ""
+        ]
+      ],
+      "formulas": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "merged_ranges": [],
+      "validations": [
+        {
+          "cell": "B2",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MARET",
+      "sheet_id": 936940746,
+      "rows": 1000,
+      "columns": 26,
+      "last_row": 5,
+      "last_column": 8,
+      "hidden": false,
+      "data": [
+        [
+          "Tanggal",
+          "Jenis",
+          "Kategori",
+          "Keterangan",
+          "Customer/Vendor",
+          "Nominal",
+          "Status",
+          "Metode Pembayaran"
+        ],
+        [
+          "2026-02-02T17:00:00.000Z",
+          "Pemasukan",
+          "Pendapatan Project",
+          "",
+          "Project Prospedity - Pak Effendi (Termin 2)",
+          3400000,
+          "",
+          ""
+        ],
+        [
+          "2026-03-02T17:00:00.000Z",
+          "Pemasukan",
+          "Pendapatan Project",
+          "",
+          "Project AMP - Pak Rudi",
+          1500000,
+          "",
+          ""
+        ],
+        [
+          "2026-05-02T17:00:00.000Z",
+          "Pemasukan",
+          "Pendapatan Maintenance",
+          "",
+          "Perpanjang DomHos Maintenance YMI ITS",
+          5000000,
+          "",
+          ""
+        ],
+        [
+          "23/3/2026",
+          "Pemasukan",
+          "Pendapatan Project",
+          "",
+          "Project Bu Vania (Termin 3)",
+          1000000,
+          "",
+          ""
+        ]
+      ],
+      "formulas": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "merged_ranges": [],
+      "validations": [
+        {
+          "cell": "B2",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B3",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B4",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C4",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G4",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H4",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B5",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C5",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G5",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H5",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "name": "APRIL",
+      "sheet_id": 133886682,
+      "rows": 1000,
+      "columns": 26,
+      "last_row": 3,
+      "last_column": 8,
+      "hidden": false,
+      "data": [
+        [
+          "Tanggal",
+          "Jenis",
+          "Kategori",
+          "Keterangan",
+          "Customer/Vendor",
+          "Nominal",
+          "Status",
+          "Metode Pembayaran"
+        ],
+        [
+          "21/4/2026",
+          "Pemasukan",
+          "Pendapatan Maintenance",
+          "",
+          "Perpanjang DomHos Maintenance Pak Rizki",
+          2000000,
+          "",
+          ""
+        ],
+        [
+          "27/4/2026",
+          "Pemasukan",
+          "Pendapatan Project",
+          "",
+          "Project Pak Tjendrawan (Termin 1)",
+          2000000,
+          "",
+          ""
+        ]
+      ],
+      "formulas": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "merged_ranges": [],
+      "validations": [
+        {
+          "cell": "B2",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B3",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MEI",
+      "sheet_id": 1269889077,
+      "rows": 1000,
+      "columns": 26,
+      "last_row": 9,
+      "last_column": 8,
+      "hidden": false,
+      "data": [
+        [
+          "Tanggal",
+          "Jenis",
+          "Kategori",
+          "Keterangan",
+          "Customer/Vendor",
+          "Nominal",
+          "Status",
+          "Metode Pembayaran"
+        ],
+        [
+          "2026-06-04T17:00:00.000Z",
+          "Pemasukan",
+          "Pendapatan Project",
+          "Project Pak Joni (Termin 1)",
+          "",
+          1950000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "19/5/2026",
+          "Pemasukan",
+          "Pendapatan Project",
+          "Project Pak Tjendrawan (Termin 2)",
+          "",
+          2000000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Gaji",
+          "Titus ",
+          "",
+          2307565,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Gaji",
+          "Cecil",
+          "",
+          1103685,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Gaji",
+          "Marketing (Kim)",
+          "",
+          243750,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Transportasi",
+          "Ke Surabaya 12-14 Mei 2026",
+          "",
+          250000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Marketing",
+          "Meta Ads Juni",
+          "",
+          272000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Transportasi",
+          "Ke Surabaya 1 Mei 2026",
+          "",
+          250000,
+          "Paid",
+          "Transfer"
+        ]
+      ],
+      "formulas": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "merged_ranges": [],
+      "validations": [
+        {
+          "cell": "B2",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B3",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B4",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C4",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G4",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H4",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B5",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C5",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G5",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H5",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B6",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C6",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G6",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H6",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B7",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C7",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G7",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H7",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B8",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C8",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G8",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H8",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B9",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C9",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G9",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H9",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "name": "JUNI",
+      "sheet_id": 1130894921,
+      "rows": 1001,
+      "columns": 26,
+      "last_row": 13,
+      "last_column": 8,
+      "hidden": false,
+      "data": [
+        [
+          "Tanggal",
+          "Jenis",
+          "Kategori",
+          "Keterangan",
+          "Customer/Vendor",
+          "Nominal",
+          "Status",
+          "Metode Pembayaran"
+        ],
+        [
+          "2026-05-05T17:00:00.000Z",
+          "Pemasukan",
+          "Pendapatan Project",
+          "Project  (Termin 2)",
+          "Pak Joni",
+          1950000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "22/6/2026",
+          "Pemasukan",
+          "Pendapatan Project",
+          "Project  (Termin 1)",
+          "Pak Yuki",
+          1500000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "26/6/2026",
+          "Pemasukan",
+          "Pendapatan Project",
+          "Project  (Termin 2)",
+          "Pak Yuki",
+          3500000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "29/6/2026",
+          "Pemasukan",
+          "Pendapatan Project",
+          "Project PT PAS (Termin 2 lunas)",
+          "PT PAS - Pak Effendi",
+          9600000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Gaji",
+          "Titus",
+          "",
+          8760000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Gaji",
+          "Cecil",
+          "",
+          5910000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Gaji",
+          "Sales (Hafiz)",
+          "",
+          250000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Operasional Kantor",
+          "BELI DOMAIN JOMOTO ",
+          "",
+          170000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Transportasi",
+          "TITUS KE SBY JUNI AWAL",
+          "",
+          250000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Transportasi",
+          "TITUS KE SBY 19-20 JUNI",
+          "",
+          250000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban AI",
+          "TITUS TOP UP DEEPSEK JUNI",
+          "",
+          346005,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Software",
+          "TITUS CHATGPT JUNI ",
+          "",
+          75000,
+          "Paid",
+          "Transfer"
+        ]
+      ],
+      "formulas": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "merged_ranges": [],
+      "validations": [
+        {
+          "cell": "B2",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B3",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B4",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C4",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G4",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H4",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B5",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C5",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G5",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H5",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B6",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C6",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G6",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H6",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B7",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C7",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G7",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H7",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B8",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C8",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G8",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H8",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B9",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C9",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G9",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H9",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B10",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C10",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G10",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H10",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B11",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C11",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G11",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H11",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B12",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C12",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G12",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H12",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B13",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C13",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G13",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H13",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "name": "JULI",
+      "sheet_id": 1189565956,
+      "rows": 1000,
+      "columns": 26,
+      "last_row": 23,
+      "last_column": 8,
+      "hidden": false,
+      "data": [
+        [
+          "Tanggal",
+          "Jenis",
+          "Kategori",
+          "Keterangan",
+          "Customer/Vendor",
+          "Nominal",
+          "Status",
+          "Metode Pembayaran"
+        ],
+        [
+          "2 Juli 2026",
+          "Pemasukan",
+          "Pendapatan Project",
+          "Project Formula Juli",
+          "Bu Vania",
+          300000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "6 Juli 2026",
+          "Pemasukan",
+          "Pendapatan Project",
+          "Project  (Termin 3)",
+          "Pak Joni",
+          1950000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "24 Juli 2026",
+          "Pemasukan",
+          "Pendapatan Maintenance",
+          "Perpanjang DomHos Maintenance ",
+          "Hakusa Edu",
+          500000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "30 Juli 2026",
+          "Pemasukan",
+          "Pendapatan Project",
+          "Project Payroll  (Termin 1)",
+          "Bu Vania",
+          2500000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Gaji",
+          "Titus",
+          "",
+          3150000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Gaji",
+          "Cecil",
+          "",
+          1575000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Maintanance",
+          "Pindah Hosting ke NATA",
+          "",
+          800000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Operasional Kantor",
+          "Content Creator IG ",
+          "",
+          300000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Operasional Kantor",
+          "Content Creator IG ",
+          "",
+          50000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Software",
+          "CHATGPT Juli",
+          "",
+          75000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Operasional Kantor",
+          "Domain jayapetir.com",
+          "",
+          181200,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Transportasi",
+          "Ke Surabaya 3 Juli",
+          "",
+          250000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "3 Juli 2026",
+          "Pengeluaran",
+          "Beban AI",
+          "Deepseek",
+          "",
+          39103,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "6 Juli 2026",
+          "Pengeluaran",
+          "Beban AI",
+          "Deepseek",
+          "",
+          97573,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "11 Juli 2026",
+          "Pengeluaran",
+          "Beban AI",
+          "Open ai",
+          "",
+          102881,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "14 Juli 2026",
+          "Pengeluaran",
+          "Beban AI",
+          "Deepseek",
+          "",
+          39420,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "14 Juli 2026",
+          "Pengeluaran",
+          "Beban AI",
+          "Deepseek",
+          "",
+          59130,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "15 Juli 2026",
+          "Pengeluaran",
+          "Beban AI",
+          "Open ai",
+          "",
+          32500,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "18 Juli 2026",
+          "Pengeluaran",
+          "Beban AI",
+          "Deepseek",
+          "",
+          97953,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "23 Juli 2026",
+          "Pengeluaran",
+          "Beban AI",
+          "Opencode Anomaly",
+          "",
+          93066,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "27 Juli 2026",
+          "Pengeluaran",
+          "Beban AI",
+          "Ai Jelek",
+          "",
+          8000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "27 Juli 2026",
+          "Pengeluaran",
+          "Beban Transportasi",
+          "Ke Surabaya 27 Juli",
+          "",
+          250000,
+          "Pending",
+          "Transfer"
+        ]
+      ],
+      "formulas": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "merged_ranges": [],
+      "validations": [
+        {
+          "cell": "B2",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B3",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B4",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C4",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G4",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H4",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B5",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C5",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G5",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H5",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B6",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C6",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G6",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H6",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B7",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C7",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G7",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H7",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B8",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C8",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G8",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H8",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B9",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C9",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G9",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H9",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B10",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C10",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G10",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H10",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B11",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C11",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G11",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H11",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B12",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C12",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G12",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H12",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B13",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C13",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G13",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H13",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B14",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C14",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G14",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H14",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B15",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C15",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G15",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H15",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B16",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C16",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G16",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H16",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B17",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C17",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G17",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H17",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B18",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C18",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G18",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H18",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B19",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C19",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G19",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H19",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B20",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C20",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G20",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H20",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B21",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C21",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G21",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H21",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B22",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C22",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G22",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H22",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B23",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C23",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G23",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H23",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AGUSTUS",
+      "sheet_id": 173583311,
+      "rows": 1000,
+      "columns": 26,
+      "last_row": 20,
+      "last_column": 8,
+      "hidden": false,
+      "data": [
+        [
+          "Tanggal",
+          "Jenis",
+          "Kategori",
+          "Keterangan",
+          "Customer/Vendor",
+          "Nominal",
+          "Status",
+          "Metode Pembayaran"
+        ],
+        [
+          "5 Agustus 2026",
+          "Pemasukan",
+          "Pendapatan Project",
+          "Pembayaran Termin 4",
+          "Pak Joni / Jomoto Center",
+          1950000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "5 Agustus 2026",
+          "Pengeluaran",
+          "Beban Gaji",
+          "Tian",
+          "",
+          1170000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "5 Agustus 2026",
+          "Pengeluaran",
+          "Beban Gaji",
+          "Cecil",
+          "",
+          585000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "7 Agustus 2026",
+          "Pemasukan",
+          "Pendapatan Project",
+          "Pembayaran Maintenance Formula",
+          "Bu Vania / Tiga Putra Perkasa",
+          300000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "7 Agustus 2026",
+          "Pengeluaran",
+          "Beban Gaji",
+          "Tian",
+          "",
+          180000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "7 Agustus 2026",
+          "Pengeluaran",
+          "Beban Gaji",
+          "Cecil",
+          "",
+          90000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Marketing",
+          "Meta Ads ke-1",
+          "META",
+          178000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Marketing",
+          "Meta Ads ke-2",
+          "META",
+          390000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Marketing",
+          "Meta Ads ke-3",
+          "META",
+          389000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Marketing",
+          "Meta Ads ke-4",
+          "META",
+          390000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Maintanance",
+          "Hosting Rumah Web",
+          "Rumah Web",
+          124000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Maintanance",
+          "Perpanjang Domain Solusi",
+          "Niagahoster",
+          237000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban Maintanance",
+          "Domain jayapetir.online",
+          "Niagahoster",
+          23000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "3 Agustus 2026",
+          "Pengeluaran",
+          "Beban AI",
+          "API ai murah",
+          "",
+          26000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "4 Agustus 2026",
+          "Pengeluaran",
+          "Beban AI",
+          "API ai murah",
+          "",
+          26000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "7 Agustus 2026",
+          "Pengeluaran",
+          "Beban AI",
+          "API ai murah",
+          "",
+          15000,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban AI",
+          "Open Router",
+          "",
+          110696,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban AI",
+          "Anomaly",
+          "",
+          199689,
+          "Paid",
+          "Transfer"
+        ],
+        [
+          "",
+          "Pengeluaran",
+          "Beban AI",
+          "Open ai",
+          "",
+          122474,
+          "Paid",
+          "Transfer"
+        ]
+      ],
+      "formulas": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "merged_ranges": [],
+      "validations": [
+        {
+          "cell": "B2",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H2",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B3",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H3",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B4",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C4",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G4",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H4",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B5",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C5",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G5",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H5",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B6",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C6",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G6",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H6",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B7",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C7",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G7",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H7",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B8",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C8",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G8",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H8",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B9",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C9",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G9",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H9",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B10",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C10",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G10",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H10",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B11",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C11",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G11",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H11",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B12",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C12",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G12",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H12",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B13",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C13",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G13",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H13",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B14",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C14",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G14",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H14",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B15",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C15",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G15",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H15",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B16",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C16",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G16",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H16",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B17",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C17",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G17",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H17",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B18",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C18",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G18",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H18",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B19",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C19",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G19",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H19",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "B20",
+          "criteria": "VALUE_IN_LIST",
+          "values": [
+            [
+              "Pemasukan",
+              "Pengeluaran"
+            ],
+            true
+          ]
+        },
+        {
+          "cell": "C20",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "G20",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        },
+        {
+          "cell": "H20",
+          "criteria": "VALUE_IN_RANGE",
+          "values": [
+            {},
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SEPTEMBER",
+      "sheet_id": 1372314315,
+      "rows": 1000,
+      "columns": 26,
+      "last_row": 1,
+      "last_column": 8,
+      "hidden": false,
+      "data": [
+        [
+          "Tanggal",
+          "Jenis",
+          "Kategori",
+          "Keterangan",
+          "Customer/Vendor",
+          "Nominal",
+          "Status",
+          "Metode Pembayaran"
+        ]
+      ],
+      "formulas": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "merged_ranges": [],
+      "validations": []
+    },
+    {
+      "name": "OKTOBER",
+      "sheet_id": 1706116342,
+      "rows": 1000,
+      "columns": 26,
+      "last_row": 1,
+      "last_column": 8,
+      "hidden": false,
+      "data": [
+        [
+          "Tanggal",
+          "Jenis",
+          "Kategori",
+          "Keterangan",
+          "Customer/Vendor",
+          "Nominal",
+          "Status",
+          "Metode Pembayaran"
+        ]
+      ],
+      "formulas": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "merged_ranges": [],
+      "validations": []
+    },
+    {
+      "name": "NOVEMBER",
+      "sheet_id": 50579755,
+      "rows": 1000,
+      "columns": 26,
+      "last_row": 1,
+      "last_column": 8,
+      "hidden": false,
+      "data": [
+        [
+          "Tanggal",
+          "Jenis",
+          "Kategori",
+          "Keterangan",
+          "Customer/Vendor",
+          "Nominal",
+          "Status",
+          "Metode Pembayaran"
+        ]
+      ],
+      "formulas": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "merged_ranges": [],
+      "validations": []
+    },
+    {
+      "name": "DESEMBER",
+      "sheet_id": 876469708,
+      "rows": 1000,
+      "columns": 26,
+      "last_row": 1,
+      "last_column": 8,
+      "hidden": false,
+      "data": [
+        [
+          "Tanggal",
+          "Jenis",
+          "Kategori",
+          "Keterangan",
+          "Customer/Vendor",
+          "Nominal",
+          "Status",
+          "Metode Pembayaran"
+        ]
+      ],
+      "formulas": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "merged_ranges": [],
+      "validations": []
+    },
+    {
+      "name": "MASTERDATA",
+      "sheet_id": 1606500385,
+      "rows": 1000,
+      "columns": 26,
+      "last_row": 15,
+      "last_column": 9,
+      "hidden": false,
+      "data": [
+        [
+          "Kategori Pemasukan",
+          "Kategori Pengeluaran",
+          "Metode Pembayaran",
+          "Status",
+          "",
+          "Jenis",
+          "Kategori",
+          "",
+          "Semua Kategori"
+        ],
+        [
+          "Pendapatan Penjualan",
+          "Beban Gaji",
+          "Transfer",
+          "Paid",
+          "",
+          "Pemasukan",
+          "Penjualan",
+          "",
+          "Pendapatan Penjualan"
+        ],
+        [
+          "Pendapatan Project",
+          "Beban Marketing",
+          "Cash",
+          "Pending",
+          "",
+          "Pemasukan",
+          "Project",
+          "",
+          "Pendapatan Project"
+        ],
+        [
+          "Pendapatan Maintenance",
+          "Beban Internet & API",
+          "QRIS",
+          "Cancelled",
+          "",
+          "Pemasukan",
+          "Maintenance",
+          "",
+          "Pendapatan Maintenance"
+        ],
+        [
+          "Pendapatan Lainnya",
+          "Beban Software",
+          "Debit",
+          "",
+          "",
+          "Pemasukan",
+          "Subscription",
+          "",
+          "Pendapatan Lainnya"
+        ],
+        [
+          "Lain-lain",
+          "Beban Transportasi",
+          "Credit Card",
+          "",
+          "",
+          "Pemasukan",
+          "Lain-lain",
+          "",
+          "Beban Gaji"
+        ],
+        [
+          "",
+          "Beban Operasional Kantor",
+          "",
+          "",
+          "",
+          "Pengeluaran",
+          "Gaji",
+          "",
+          "Beban Marketing"
+        ],
+        [
+          "",
+          "Beban Pajak",
+          "",
+          "",
+          "",
+          "Pengeluaran",
+          "Operasional Kantor",
+          "",
+          "Beban Maintanance"
+        ],
+        [
+          "",
+          "Beban Peralatan",
+          "",
+          "",
+          "",
+          "Pengeluaran",
+          "Marketing",
+          "",
+          "Beban Software"
+        ],
+        [
+          "",
+          "Beban Lainnya",
+          "",
+          "",
+          "",
+          "Pengeluaran",
+          "Transportasi",
+          "",
+          "Beban Transportasi"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Pengeluaran",
+          "Internet & Software",
+          "",
+          "Beban Operasional Kantor"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Pengeluaran",
+          "Pajak",
+          "",
+          "Beban Pajak"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Pengeluaran",
+          "Peralatan",
+          "",
+          "Beban Peralatan"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Pengeluaran",
+          "Entertainment",
+          "",
+          "Beban Lainnya"
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Pengeluaran",
+          "Lain-lain",
+          "",
+          "Beban AI"
+        ]
+      ],
+      "formulas": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "merged_ranges": [],
+      "validations": []
+    }
+  ]
+}

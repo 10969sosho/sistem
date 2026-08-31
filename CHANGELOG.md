@@ -2,11 +2,15 @@
 
 ## 2026-08-18
 
+- Menambahkan skrip deploy production melalui SSH, verifier health check dan
+  endpoint utama, serta workflow GitHub Actions untuk test, deploy, dan
+  verifikasi pascadeploy.
 - Memperbaiki pemuatan timeline aktivitas pada detail CRM Lead agar tetap aman ketika relasi lead pada aktivitas sudah tidak tersedia.
 - Menambahkan entry point HTML serta stylesheet dan script minimal di root untuk memenuhi pemeriksaan asset statis repository.
 - Memperbaiki endpoint detail CRM Leads agar lead yang belum terhubung ke customer tetap dapat dimuat.
 - Menambahkan regresi test untuk detail lead tanpa customer.
 - Memperbaiki perubahan status CRM Leads dari form edit dan menambahkan regresi test endpoint status.
 - Mengubah field Lead ID pada form CRM Pipeline menjadi dropdown yang mengambil daftar leads milik user.
+- Menambahkan validasi kepemilikan `lead_id` pada pembuatan opportunity agar pipeline tidak dapat memakai lead milik user lain.
 - Menambahkan integration test untuk alur login hingga akses dashboard.
 - Menambahkan Playwright UI test untuk redirect autentikasi, login, dashboard, dan logout.

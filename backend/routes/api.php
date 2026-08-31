@@ -4,8 +4,10 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CustomerController;
 use App\Http\Controllers\Api\CrmController;
 use App\Http\Controllers\Api\DashboardController;
+use App\Http\Controllers\Api\DebtController;
 use App\Http\Controllers\Api\FinanceController;
 use App\Http\Controllers\Api\HostingController;
+use App\Http\Controllers\Api\TransactionController;
 use App\Http\Controllers\Api\MetaController;
 use App\Http\Controllers\Api\PublicTaskController;
 use App\Http\Controllers\Api\ProjectController;
@@ -61,4 +63,20 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/finance/{id}', [FinanceController::class, 'record']);
     Route::post('/finance', [FinanceController::class, 'store']);
     Route::delete('/finance/project/{projectId}', [FinanceController::class, 'destroy']);
+
+    // Keuangan - Transaksi
+    Route::get('/transactions', [TransactionController::class, 'index']);
+    Route::post('/transactions', [TransactionController::class, 'store']);
+    Route::get('/transactions/summary', [TransactionController::class, 'summary']);
+    Route::get('/transactions/{id}', [TransactionController::class, 'show']);
+    Route::put('/transactions/{id}', [TransactionController::class, 'update']);
+    Route::delete('/transactions/{id}', [TransactionController::class, 'destroy']);
+
+    // Keuangan - Hutang ke Owner
+    Route::get('/debts', [DebtController::class, 'index']);
+    Route::post('/debts', [DebtController::class, 'store']);
+    Route::get('/debts/summary', [DebtController::class, 'summary']);
+    Route::get('/debts/{id}', [DebtController::class, 'show']);
+    Route::put('/debts/{id}', [DebtController::class, 'update']);
+    Route::delete('/debts/{id}', [DebtController::class, 'destroy']);
 });

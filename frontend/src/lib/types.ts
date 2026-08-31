@@ -96,6 +96,107 @@ export interface Finance {
   project?: Project;
 }
 
+export interface Transaction {
+  id: number;
+  date: string;
+  type: 'pemasukan' | 'pengeluaran';
+  category: string;
+  description: string | null;
+  vendor: string | null;
+  amount: number;
+  status: 'paid' | 'pending' | 'cancelled';
+  payment_method: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface Debt {
+  id: number;
+  date: string | null;
+  type: 'talangan' | 'pinjaman' | 'reimburse';
+  person: 'CECIL' | 'TIAN';
+  description: string;
+  amount: number;
+  status: 'belum_dibayar' | 'dibayar_sebagian' | 'lunas';
+  paid_date: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface TransactionSummary {
+  year: number;
+  month: number | null;
+  total_pemasukan: number;
+  total_pengeluaran: number;
+  laba_rugi: number;
+  pemasukan_by_category: Record<string, number>;
+  pengeluaran_by_category: Record<string, number>;
+  kas_masuk: number;
+  kas_keluar: number;
+  saldo_kas: number;
+}
+
+export interface DebtSummary {
+  total_all: number;
+  total_belum_dibayar: number;
+  total_dibayar_sebagian: number;
+  total_lunas: number;
+  by_person: Record<string, { total: number; belum_dibayar: number; lunas: number; count: number }>;
+}
+
+export const TRANSACTION_TYPE = {
+  pemasukan: 'Pemasukan',
+  pengeluaran: 'Pengeluaran',
+} as const;
+
+export const TRANSACTION_STATUS = {
+  paid: 'Paid',
+  pending: 'Pending',
+  cancelled: 'Cancelled',
+} as const;
+
+export const DEBT_TYPE = {
+  talangan: 'Talangan',
+  pinjaman: 'Pinjaman',
+  reimburse: 'Reimburse',
+} as const;
+
+export const DEBT_STATUS = {
+  belum_dibayar: 'Belum Dibayar',
+  dibayar_sebagian: 'Dibayar Sebagian',
+  lunas: 'Lunas',
+} as const;
+
+export const KATEGORI_PEMASUKAN = [
+  'Pendapatan Penjualan',
+  'Pendapatan Project',
+  'Pendapatan Maintenance',
+  'Pendapatan Lainnya',
+] as const;
+
+export const KATEGORI_PENGELUARAN = [
+  'Beban Gaji',
+  'Beban Marketing',
+  'Beban AI',
+  'Beban Software',
+  'Beban Transportasi',
+  'Beban Operasional Kantor',
+  'Beban Pajak',
+  'Beban Peralatan',
+  'Beban Maintanance',
+  'Beban Lainnya',
+] as const;
+
+export const METODE_PEMBAYARAN = [
+  'Transfer',
+  'Cash',
+  'QRIS',
+  'Debit',
+  'Credit Card',
+] as const;
+
+export const PERSON_OPTIONS = ['CECIL', 'TIAN'] as const;
+
 export interface DashboardSummary {
   date: string;
   today_tasks: { count: number; items: Task[] };

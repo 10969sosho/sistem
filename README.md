@@ -88,7 +88,7 @@ Aplikasi web untuk membantu perusahaan software house mengelola customer, projec
 - **Laravel 13** - PHP Framework
 - **MySQL 9** - Database
 - **Laravel Sanctum** - API Authentication
-- **PHPUnit 12** - Testing (65 tests)
+- **PHPUnit 12** - Testing (71 tests)
 
 ### Frontend
 - **Next.js 16** - React Framework
@@ -354,7 +354,7 @@ php artisan test --filter=AuthTest
 php artisan test --coverage
 ```
 
-**Total: 65 tests** covering:
+**Total: 71 tests** covering:
 - Authentication (5 tests)
 - Customer CRUD (9 tests)
 - Project CRUD (9 tests)
@@ -363,6 +363,7 @@ php artisan test --coverage
 - Finance CRUD (7 tests)
 - Dashboard (6 tests)
 - Global Search (7 tests)
+- CRM Pipeline and Lead (5 tests)
 
 ### Frontend Build
 
@@ -449,6 +450,10 @@ npm run test:e2e
 ---
 
 ## 🚀 Deployment
+
+Otomasi deploy production dan verifikasi pascadeploy tersedia di
+[`DEPLOYMENT.md`](DEPLOYMENT.md). Gunakan `./scripts/deploy.sh` untuk deploy
+manual, atau push ke `main` untuk menjalankan workflow GitHub Actions.
 
 ### Backend Deployment
 
