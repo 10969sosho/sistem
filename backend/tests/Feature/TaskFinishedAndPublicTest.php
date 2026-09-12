@@ -105,8 +105,107 @@ class TaskFinishedAndPublicTest extends TestCase
 
         $conditions = collect($response->json('data'))->pluck('condition');
         $this->assertEqualsCanonicalizing(['not_started', 'on_going', 'finished'], $conditions->all());
+    }
 
-        // Read-only: metode lain harus ditolak.
-        $this->postJson('/api/public/tasks')->assertStatus(405);
+    public function test_public_tasks_can_be_created_with_mapped_fields(): void
+    {
+        $response = $this->postJson('/api/public/tasks', [
+            'title' => 'Task Hermes Barusan',
+            'owner' => 'TIAN',
+            'due_date' => '2026-09-20',
+            'priority' => 'high',
+            'notes' => 'Catatan dari hermes',
+        ]);
+
+        $response->assertStatus(201)
+            ->assertJsonPath('data.title', 'Task Hermes Barusan')
+            ->assertJsonPath('data.owner', 'TIAN')
+            ->assertJsonPath('data.cabang', 'tian')
+            ->assertJsonPath('data.due_date', '2026-09-20')
+            ->assertJsonPath('data.condition', 'not_started');
+
+        $this->assertDatabaseHas('tasks', [
+            'title' => 'Task Hermes Barusan',
+            'cabang' => 'tian',
+            'deadline' => '2026-09-20 00:00:00',
+        ]);
+    }
+
+    public function test_public_tasks_can_be_updated(): void
+    {
+        $task = Task::factory()->create([
+            'title' => 'Original Task',
+            'cabang' => 'cecil',
+            'status' => 'todo',
+        ]);
+
+        $response = $this->patchJson("/api/public/tasks/{$task->id}", [
+            'title' => 'Task Updated by Hermes',
+            'owner' => 'TIAN',
+            'priority' => 'urgent',
+        ]);
+
+        $response->assertStatus(200)
+            ->assertJsonPath('data.title', 'Task Updated by Hermes')
+            ->assertJsonPath('data.owner', 'TIAN')
+            ->assertJsonPath('data.priority', 'urgent');
+
+        $task->refresh();
+        $this->assertEquals('Task Updated by Hermes', $task->title);
+        $this->assertEquals('tian', $task->cabang);
+    }
+
+    public function test_public_task_status_can_be_changed_and_syncs_finished_at(): void
+    {
+        $task = Task::factory()->create(['status' => 'progress']);
+
+        $response = $this->patchJson("/api/public/tasks/{$task->id}/status", [
+            'status' => 'done',
+        ]);
+
+        $response->assertStatus(200)
+            ->assertJsonPath('data.status', 'done')
+            ->assertJsonPath('data.condition', 'finished');
+        $this->assertNotNull($response->json('data.finished_at'));
+
+        $task->refresh();
+        $this->assertEquals('done', $task->status);
+        $this->assertNotNull($task->finished_at);
+
+        // Ubah balik ke progress
+        $responseBack = $this->patchJson("/api/public/tasks/{$task->id}/status", [
+            'status' => 'progress',
+        ]);
+
+        $responseBack->assertStatus(200)
+            ->assertJsonPath('data.status', 'progress')
+            ->assertJsonPath('data.condition', 'on_going');
+        $this->assertNull($responseBack->json('data.finished_at'));
+    }
+
+    public function test_public_task_write_enforces_api_key_when_configured(): void
+    {
+        config(['services.hermes.key' => 'secret-hermes-token-xyz']);
+
+        // Tanpa key -> 401
+        $this->postJson('/api/public/tasks', ['title' => 'Unauthorized Task'])
+            ->assertStatus(401);
+
+        // Key salah -> 401
+        $this->withHeaders(['X-API-KEY' => 'wrong-key'])
+            ->postJson('/api/public/tasks', ['title' => 'Unauthorized Task'])
+            ->assertStatus(401);
+
+        // Key benar via header X-API-KEY -> 201
+        $this->withHeaders(['X-API-KEY' => 'secret-hermes-token-xyz'])
+            ->postJson('/api/public/tasks', ['title' => 'Authorized Task', 'owner' => 'cecil'])
+            ->assertStatus(201);
+
+        $task = Task::where('title', 'Authorized Task')->first();
+
+        // Key benar via Bearer token -> 200
+        $this->withHeaders(['Authorization' => 'Bearer secret-hermes-token-xyz'])
+            ->patchJson("/api/public/tasks/{$task->id}/status", ['status' => 'done'])
+            ->assertStatus(200);
     }
 }

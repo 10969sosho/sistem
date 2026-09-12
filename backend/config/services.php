@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'hermes' => [
+        'key' => env('HERMES_API_KEY'),
+    ],
+
 ];

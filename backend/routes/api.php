@@ -17,8 +17,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/login', [AuthController::class, 'login']);
 
-// API publik tanpa auth (read-only) untuk agent eksternal.
-Route::get('/public/tasks', [PublicTaskController::class, 'index']);
+// API untuk agent eksternal (Hermes) & monitoring.
+Route::prefix('public')->group(function () {
+    Route::get('/tasks', [PublicTaskController::class, 'index']);
+    Route::post('/tasks', [PublicTaskController::class, 'store']);
+    Route::get('/tasks/{id}', [PublicTaskController::class, 'show']);
+    Route::match(['put', 'patch'], '/tasks/{id}', [PublicTaskController::class, 'update']);
+    Route::patch('/tasks/{id}/status', [PublicTaskController::class, 'changeStatus']);
+});
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
